@@ -256,6 +256,9 @@ camera_shared_LIB_DEPENDS:STATIC=general;opencv_objdetect;general;opencv_superre
 //Dependencies for the target
 tag_detect_shared_LIB_DEPENDS:STATIC=general;/usr/local/lib/libapriltag.so;general;/usr/local/lib/libapriltag.so.3;general;/usr/local/lib/libapriltag.so.3.1.0;general;opencv_objdetect;general;opencv_superres;general;opencv_core;general;opencv_flann;general;opencv_highgui;general;opencv_imgcodecs;general;opencv_videostab;general;opencv_imgproc;general;opencv_video;general;opencv_dnn;general;opencv_stitching;general;opencv_shape;general;opencv_photo;general;opencv_calib3d;general;opencv_ml;general;opencv_viz;general;opencv_features2d;general;opencv_videoio;general;opencv_objdetect;general;opencv_superres;general;opencv_core;general;opencv_flann;general;opencv_highgui;general;opencv_imgcodecs;general;opencv_videostab;general;opencv_imgproc;general;opencv_video;general;opencv_dnn;general;opencv_stitching;general;opencv_shape;general;opencv_photo;general;opencv_calib3d;general;opencv_ml;general;opencv_viz;general;opencv_features2d;general;opencv_videoio;
 
+//Dependencies for the target
+user_interface_shared_LIB_DEPENDS:STATIC=general;tag_detect_shared;
+
 
 ########################
 # INTERNAL cache entries
@@ -347,6 +350,8 @@ CMAKE_GENERATOR_INSTANCE:INTERNAL=
 CMAKE_GENERATOR_PLATFORM:INTERNAL=
 //Name of generator toolset.
 CMAKE_GENERATOR_TOOLSET:INTERNAL=
+//Have symbol pthread_create
+CMAKE_HAVE_LIBC_CREATE:INTERNAL=
 //Test CMAKE_HAVE_LIBC_PTHREAD
 CMAKE_HAVE_LIBC_PTHREAD:INTERNAL=
 //Have library pthreads

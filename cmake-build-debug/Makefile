@@ -76,17 +76,6 @@ CMAKE_BINARY_DIR = /home/doudou/apriltag_test/cmake-build-debug
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/snap/clion/129/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
-
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -97,6 +86,17 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
+
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/snap/clion/129/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -131,30 +131,30 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named test_lib
+# Target rules for targets named AprilTagCar
 
 # Build rule for target.
-test_lib: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_lib
-.PHONY : test_lib
+AprilTagCar: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 AprilTagCar
+.PHONY : AprilTagCar
 
 # fast build rule for target.
-test_lib/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_lib.dir/build.make CMakeFiles/test_lib.dir/build
-.PHONY : test_lib/fast
+AprilTagCar/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AprilTagCar.dir/build.make CMakeFiles/AprilTagCar.dir/build
+.PHONY : AprilTagCar/fast
 
 #=============================================================================
-# Target rules for targets named apriltag_detect_demo
+# Target rules for targets named camera_shared
 
 # Build rule for target.
-apriltag_detect_demo: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 apriltag_detect_demo
-.PHONY : apriltag_detect_demo
+camera_shared: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 camera_shared
+.PHONY : camera_shared
 
 # fast build rule for target.
-apriltag_detect_demo/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/apriltag_detect_demo.dir/build.make CMakeFiles/apriltag_detect_demo.dir/build
-.PHONY : apriltag_detect_demo/fast
+camera_shared/fast:
+	$(MAKE) $(MAKESILENT) -f lib/CMakeFiles/camera_shared.dir/build.make lib/CMakeFiles/camera_shared.dir/build
+.PHONY : camera_shared/fast
 
 #=============================================================================
 # Target rules for targets named tag_detect_shared
@@ -170,71 +170,44 @@ tag_detect_shared/fast:
 .PHONY : tag_detect_shared/fast
 
 #=============================================================================
-# Target rules for targets named camera_shared
+# Target rules for targets named user_interface_shared
 
 # Build rule for target.
-camera_shared: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 camera_shared
-.PHONY : camera_shared
+user_interface_shared: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 user_interface_shared
+.PHONY : user_interface_shared
 
 # fast build rule for target.
-camera_shared/fast:
-	$(MAKE) $(MAKESILENT) -f lib/CMakeFiles/camera_shared.dir/build.make lib/CMakeFiles/camera_shared.dir/build
-.PHONY : camera_shared/fast
+user_interface_shared/fast:
+	$(MAKE) $(MAKESILENT) -f lib/CMakeFiles/user_interface_shared.dir/build.make lib/CMakeFiles/user_interface_shared.dir/build
+.PHONY : user_interface_shared/fast
 
-opencv_demo.o: opencv_demo.cpp.o
+apriltag_car.o: apriltag_car.cpp.o
 
-.PHONY : opencv_demo.o
-
-# target to build an object file
-opencv_demo.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/apriltag_detect_demo.dir/build.make CMakeFiles/apriltag_detect_demo.dir/opencv_demo.cpp.o
-.PHONY : opencv_demo.cpp.o
-
-opencv_demo.i: opencv_demo.cpp.i
-
-.PHONY : opencv_demo.i
-
-# target to preprocess a source file
-opencv_demo.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/apriltag_detect_demo.dir/build.make CMakeFiles/apriltag_detect_demo.dir/opencv_demo.cpp.i
-.PHONY : opencv_demo.cpp.i
-
-opencv_demo.s: opencv_demo.cpp.s
-
-.PHONY : opencv_demo.s
-
-# target to generate assembly for a file
-opencv_demo.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/apriltag_detect_demo.dir/build.make CMakeFiles/apriltag_detect_demo.dir/opencv_demo.cpp.s
-.PHONY : opencv_demo.cpp.s
-
-test_lib.o: test_lib.cpp.o
-
-.PHONY : test_lib.o
+.PHONY : apriltag_car.o
 
 # target to build an object file
-test_lib.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_lib.dir/build.make CMakeFiles/test_lib.dir/test_lib.cpp.o
-.PHONY : test_lib.cpp.o
+apriltag_car.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AprilTagCar.dir/build.make CMakeFiles/AprilTagCar.dir/apriltag_car.cpp.o
+.PHONY : apriltag_car.cpp.o
 
-test_lib.i: test_lib.cpp.i
+apriltag_car.i: apriltag_car.cpp.i
 
-.PHONY : test_lib.i
+.PHONY : apriltag_car.i
 
 # target to preprocess a source file
-test_lib.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_lib.dir/build.make CMakeFiles/test_lib.dir/test_lib.cpp.i
-.PHONY : test_lib.cpp.i
+apriltag_car.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AprilTagCar.dir/build.make CMakeFiles/AprilTagCar.dir/apriltag_car.cpp.i
+.PHONY : apriltag_car.cpp.i
 
-test_lib.s: test_lib.cpp.s
+apriltag_car.s: apriltag_car.cpp.s
 
-.PHONY : test_lib.s
+.PHONY : apriltag_car.s
 
 # target to generate assembly for a file
-test_lib.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_lib.dir/build.make CMakeFiles/test_lib.dir/test_lib.cpp.s
-.PHONY : test_lib.cpp.s
+apriltag_car.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AprilTagCar.dir/build.make CMakeFiles/AprilTagCar.dir/apriltag_car.cpp.s
+.PHONY : apriltag_car.cpp.s
 
 # Help Target
 help:
@@ -244,16 +217,13 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... apriltag_detect_demo"
+	@echo "... AprilTagCar"
 	@echo "... camera_shared"
 	@echo "... tag_detect_shared"
-	@echo "... test_lib"
-	@echo "... opencv_demo.o"
-	@echo "... opencv_demo.i"
-	@echo "... opencv_demo.s"
-	@echo "... test_lib.o"
-	@echo "... test_lib.i"
-	@echo "... test_lib.s"
+	@echo "... user_interface_shared"
+	@echo "... apriltag_car.o"
+	@echo "... apriltag_car.i"
+	@echo "... apriltag_car.s"
 .PHONY : help
 
 

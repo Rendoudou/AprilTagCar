@@ -131,6 +131,21 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+lib/CMakeFiles/camera_shared.dir/rule:
+	cd /home/doudou/apriltag_test/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/CMakeFiles/camera_shared.dir/rule
+.PHONY : lib/CMakeFiles/camera_shared.dir/rule
+
+# Convenience name for target.
+camera_shared: lib/CMakeFiles/camera_shared.dir/rule
+
+.PHONY : camera_shared
+
+# fast build rule for target.
+camera_shared/fast:
+	cd /home/doudou/apriltag_test/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/camera_shared.dir/build.make lib/CMakeFiles/camera_shared.dir/build
+.PHONY : camera_shared/fast
+
+# Convenience name for target.
 lib/CMakeFiles/tag_detect_shared.dir/rule:
 	cd /home/doudou/apriltag_test/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/CMakeFiles/tag_detect_shared.dir/rule
 .PHONY : lib/CMakeFiles/tag_detect_shared.dir/rule
@@ -146,19 +161,19 @@ tag_detect_shared/fast:
 .PHONY : tag_detect_shared/fast
 
 # Convenience name for target.
-lib/CMakeFiles/camera_shared.dir/rule:
-	cd /home/doudou/apriltag_test/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/CMakeFiles/camera_shared.dir/rule
-.PHONY : lib/CMakeFiles/camera_shared.dir/rule
+lib/CMakeFiles/user_interface_shared.dir/rule:
+	cd /home/doudou/apriltag_test/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/CMakeFiles/user_interface_shared.dir/rule
+.PHONY : lib/CMakeFiles/user_interface_shared.dir/rule
 
 # Convenience name for target.
-camera_shared: lib/CMakeFiles/camera_shared.dir/rule
+user_interface_shared: lib/CMakeFiles/user_interface_shared.dir/rule
 
-.PHONY : camera_shared
+.PHONY : user_interface_shared
 
 # fast build rule for target.
-camera_shared/fast:
-	cd /home/doudou/apriltag_test/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/camera_shared.dir/build.make lib/CMakeFiles/camera_shared.dir/build
-.PHONY : camera_shared/fast
+user_interface_shared/fast:
+	cd /home/doudou/apriltag_test/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/user_interface_shared.dir/build.make lib/CMakeFiles/user_interface_shared.dir/build
+.PHONY : user_interface_shared/fast
 
 camera.o: camera.cpp.o
 
@@ -214,6 +229,33 @@ tag_detect.cpp.s:
 	cd /home/doudou/apriltag_test/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/tag_detect_shared.dir/build.make lib/CMakeFiles/tag_detect_shared.dir/tag_detect.cpp.s
 .PHONY : tag_detect.cpp.s
 
+user_interface.o: user_interface.cpp.o
+
+.PHONY : user_interface.o
+
+# target to build an object file
+user_interface.cpp.o:
+	cd /home/doudou/apriltag_test/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/user_interface_shared.dir/build.make lib/CMakeFiles/user_interface_shared.dir/user_interface.cpp.o
+.PHONY : user_interface.cpp.o
+
+user_interface.i: user_interface.cpp.i
+
+.PHONY : user_interface.i
+
+# target to preprocess a source file
+user_interface.cpp.i:
+	cd /home/doudou/apriltag_test/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/user_interface_shared.dir/build.make lib/CMakeFiles/user_interface_shared.dir/user_interface.cpp.i
+.PHONY : user_interface.cpp.i
+
+user_interface.s: user_interface.cpp.s
+
+.PHONY : user_interface.s
+
+# target to generate assembly for a file
+user_interface.cpp.s:
+	cd /home/doudou/apriltag_test/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/user_interface_shared.dir/build.make lib/CMakeFiles/user_interface_shared.dir/user_interface.cpp.s
+.PHONY : user_interface.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -224,12 +266,16 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... camera_shared"
 	@echo "... tag_detect_shared"
+	@echo "... user_interface_shared"
 	@echo "... camera.o"
 	@echo "... camera.i"
 	@echo "... camera.s"
 	@echo "... tag_detect.o"
 	@echo "... tag_detect.i"
 	@echo "... tag_detect.s"
+	@echo "... user_interface.o"
+	@echo "... user_interface.i"
+	@echo "... user_interface.s"
 .PHONY : help
 
 

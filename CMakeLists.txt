@@ -25,9 +25,10 @@ include_directories(${EIGEN3_INCLUDE_DIRS})
 include_directories(lib)
 
 #MY Lib
-set( My_LIBS
-  camera_shared
-  tag_detect_shared
+set(My_LIBS
+        camera_shared
+        tag_detect_shared
+        user_interface_shared
 )
 
 #找到apriltag
@@ -36,10 +37,8 @@ message(STATUS "apriltag_dir:${apriltag_DIR}")
 message(STATUS "apriltag_libs:${apriltag_LIBS}")
 
 #可执行文件
-add_executable(apriltag_detect_demo opencv_demo.cpp)
-add_executable(test_lib test_lib.cpp)
+add_executable(AprilTagCar apriltag_car.cpp)
 
 #链接
-target_link_libraries(apriltag_detect_demo ${apriltag_LIBS} ${OpenCV_LIBS})
-target_link_libraries(test_lib ${OpenCV_LIBS} ${My_LIBS})
+target_link_libraries(AprilTagCar ${OpenCV_LIBS} ${My_LIBS})
 

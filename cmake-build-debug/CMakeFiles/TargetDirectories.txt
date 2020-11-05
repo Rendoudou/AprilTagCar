@@ -1,8 +1,8 @@
-/home/doudou/apriltag_test/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/doudou/apriltag_test/cmake-build-debug/CMakeFiles/test_lib.dir
 /home/doudou/apriltag_test/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/doudou/apriltag_test/cmake-build-debug/CMakeFiles/apriltag_detect_demo.dir
-/home/doudou/apriltag_test/cmake-build-debug/lib/CMakeFiles/rebuild_cache.dir
-/home/doudou/apriltag_test/cmake-build-debug/lib/CMakeFiles/edit_cache.dir
-/home/doudou/apriltag_test/cmake-build-debug/lib/CMakeFiles/tag_detect_shared.dir
+/home/doudou/apriltag_test/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/doudou/apriltag_test/cmake-build-debug/CMakeFiles/AprilTagCar.dir
 /home/doudou/apriltag_test/cmake-build-debug/lib/CMakeFiles/camera_shared.dir
+/home/doudou/apriltag_test/cmake-build-debug/lib/CMakeFiles/rebuild_cache.dir
+/home/doudou/apriltag_test/cmake-build-debug/lib/CMakeFiles/tag_detect_shared.dir
+/home/doudou/apriltag_test/cmake-build-debug/lib/CMakeFiles/user_interface_shared.dir
+/home/doudou/apriltag_test/cmake-build-debug/lib/CMakeFiles/edit_cache.dir

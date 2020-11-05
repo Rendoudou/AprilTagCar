@@ -6,6 +6,8 @@
 
 #IncludeRegexTransform: 
 
+/home/doudou/apriltag_test/lib/common_param.h
+
 /home/doudou/apriltag_test/lib/tag_detect.cpp
 tag_detect.h
 /home/doudou/apriltag_test/lib/tag_detect.h
@@ -21,6 +23,8 @@ map
 -
 Eigen/Core
 -
+common_param.h
+/home/doudou/apriltag_test/lib/common_param.h
 apriltag.h
 /home/doudou/apriltag_test/lib/apriltag.h
 apriltag_pose.h

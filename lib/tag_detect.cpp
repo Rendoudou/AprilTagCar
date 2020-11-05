@@ -1,5 +1,7 @@
+//
+// Created by doudou on 2020/11/4.
+//
 #include "tag_detect.h"
-
 using namespace cv;
 
 //static params
@@ -15,11 +17,11 @@ static apriltag_pose_t tag_pose; // parameters of the tag pose R and t
 static std::map<unsigned int, Eigen::Matrix<float, 3, 3> > id_H_map;
 static std::map<unsigned int, Eigen::Matrix<float, 3, 3> > id_R_map;
 static std::map<unsigned int, Eigen::Matrix<float, 3, 1> > id_t_map;
-static Eigen::Matrix<float, 3, 3> H_matrix;
-static Eigen::Matrix<float, 3, 3> R_matrix;
-static Eigen::Matrix<float, 3, 1> t_matrix;
-static cv::Mat frame_copy;
-static cv::Mat frame_gray;
+static Eigen::Matrix<float, 3, 3> H_matrix;/* NOLINT */
+static Eigen::Matrix<float, 3, 3> R_matrix;/* NOLINT */
+static Eigen::Matrix<float, 3, 1> t_matrix;/* NOLINT */
+static cv::Mat frame_copy;/* NOLINT */
+static cv::Mat frame_gray;/* NOLINT */
 static zarray_t *detections;
 static apriltag_detection_t *det;
 
@@ -87,13 +89,12 @@ bool tag_detect_init() {
     if (tf != nullptr)
         return true;
 
-    family_name = "tag36h11"; //set tag family
-    camera_calib_info.det = det;
-    camera_calib_info.tagsize = 0.0465;
-    camera_calib_info.fx = 3029.6;
-    camera_calib_info.fy = 3027.1;
-    camera_calib_info.cx = 1517.2;
-    camera_calib_info.cy = 2032.7;
+    family_name = FAMILY; //set tag family
+    camera_calib_info.tagsize = TAG_SIZE;
+    camera_calib_info.fx = CAMERA_FX;
+    camera_calib_info.fy = CAMERA_FY;
+    camera_calib_info.cx = CAMERA_CX;
+    camera_calib_info.cy = CAMERA_CY;
 
     getopt_tag = getopt_create(); //opt operation
 
@@ -107,8 +108,8 @@ bool tag_detect_init() {
 }
 
 
-/* void apriltag_detect(cv::Mat& frame)
- * 资源释放
+/* cv::Mat& tag_detect(cv::Mat& frame_in);
+ * 标签检测
  */
 cv::Mat& tag_detect(cv::Mat& frame_in) {
     frame_copy = frame_in.clone();
@@ -177,8 +178,8 @@ cv::Mat& tag_detect(cv::Mat& frame_in) {
 }
 
 
-/* bool release_tdtfopt(void)
- * 资源释放
+/* release_tdtfopt();
+ * 释放内存
  */
 bool release_tdtfopt() {
     apriltag_detector_destroy(td);
@@ -207,11 +208,36 @@ bool release_tdtfopt() {
 }
 
 
+//interface to user_interface
+/* std::map<unsigned int, Eigen::Matrix<float, 3, 3>> &get_H_map();
+ * 返回单应性矩阵信息
+ */
+std::map<unsigned int, Eigen::Matrix<float, 3, 3>> &get_H_map(){
+    return id_H_map;
+}
+
+
+/* std::map<unsigned int, Eigen::Matrix<float, 3, 3>> &get_R_map();
+ * 返回估算旋转矩阵信息
+ */
+std::map<unsigned int, Eigen::Matrix<float, 3, 3>> &get_R_map(){
+    return id_R_map;
+}
+
+
+/* std::map<unsigned int, Eigen::Matrix<float, 3, 1>> &get_t_map();
+ * 返回估算平移向量信息
+ */
+std::map<unsigned int, Eigen::Matrix<float, 3, 1>> &get_t_map(){
+    return id_t_map;
+}
+
+
 /* void show_id_H(void)
  * 显示id单应性矩阵
  */
 void show_id_H() {
-    std::map<unsigned int, Eigen::Matrix<float, 3, 3>>::iterator pm = id_H_map.begin();
+    std::map<unsigned int, Eigen::Matrix<float, 3, 3>>::iterator pm = id_H_map.begin();/* NOLINT */
     if (!id_H_map.empty()) {
         for (pm; pm != id_H_map.end(); pm++) {
             std::cout << "Tag id " << pm->first << +" Homography matrix:" << std::endl;
@@ -228,7 +254,7 @@ void show_id_H() {
  * 显示id旋转矩阵
  */
 void show_id_R() {
-    std::map<unsigned int, Eigen::Matrix<float, 3, 3>>::iterator pm = id_R_map.begin();
+    std::map<unsigned int, Eigen::Matrix<float, 3, 3>>::iterator pm = id_R_map.begin();/* NOLINT */
     if (!id_R_map.empty()) {
         for (pm; pm != id_R_map.end(); pm++) {
             std::cout << "Tag id " << pm->first << +" Rotation matrix:" << std::endl;
@@ -245,7 +271,7 @@ void show_id_R() {
  * 显示id平移信息
  */
 void show_id_t() {
-    std::map<unsigned int, Eigen::Matrix<float, 3, 1>>::iterator pm = id_t_map.begin();
+    std::map<unsigned int, Eigen::Matrix<float, 3, 1>>::iterator pm = id_t_map.begin();/* NOLINT */
     if (!id_t_map.empty()) {
         for (pm; pm != id_t_map.end(); pm++) {
             std::cout << "Tag id " << pm->first << +" t vector: ";

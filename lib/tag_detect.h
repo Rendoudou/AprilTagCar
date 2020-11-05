@@ -1,3 +1,6 @@
+//
+// Created by doudou on 2020/11/4.
+//
 #ifndef _TAG_DETECT_H_
 #define _TAG_DETECT_H_
 
@@ -7,6 +10,7 @@
 #include <opencv2/opencv.hpp>
 #include <map>
 #include <Eigen/Core>
+#include "common_param.h"
 
 extern "C" {
 #include "apriltag.h"
@@ -25,7 +29,7 @@ extern "C" {
 
 
 /* cv::Mat& tag_detect(cv::Mat& frame_in);
- * 标签检测
+ * describe: 标签检测
  * param: cv::Mat&, frame_in, 输入图像。
  * return: cv::Mat&, 处理后结果。
  */
@@ -33,45 +37,49 @@ cv::Mat &tag_detect(cv::Mat &frame_in);
 
 
 /* bool tag_detect_init(void);
- * 检测初始化
+ * describe: 检测初始化
  * param: void
  * return: bool,  false 初始化失败， true 初始化成功
  */
 bool tag_detect_init();
 
 
-/* release_tdtfopt(void);
- * 释放内存
+/* release_tdtfopt();
+ * describe: 释放内存
  * param: void
- * return: void
+ * return: bool
  */
 bool release_tdtfopt();
 
 
-/* show_id_H(void);
- * 单应性矩阵
+/* std::map<unsigned int, Eigen::Matrix<float, 3, 3>> &get_H_map();
+ * describe: 返回单应性矩阵信息
  * param: void
- * return: void
+ * return: std::map<unsigned int, Eigen::Matrix<float, 3, 3>>&,矩阵map
  */
+std::map<unsigned int, Eigen::Matrix<float, 3, 3>> &get_H_map();
+
 void show_id_H();
 
 
-/* show_id_t(void);
- * 平移矩阵
+/* std::map<unsigned int, Eigen::Matrix<float, 3, 3>> &get_R_map();
+ * describe: 返回估算旋转矩阵信息
  * param: void
- * return: void
+ * return: std::map<unsigned int, Eigen::Matrix<float, 3, 3>>&,矩阵map
  */
-void show_id_t();
+std::map<unsigned int, Eigen::Matrix<float, 3, 3>> &get_R_map();
 
-
-/* show_id_R(void);
- * 旋转矩阵
- * param: void
- * return: void
- */
 void show_id_R();
 
 
+/* std::map<unsigned int, Eigen::Matrix<float, 3, 1>> &get_t_map();
+ * describe: 返回估算平移向量信息
+ * param: void
+ * return: std::map<unsigned int, Eigen::Matrix<float, 3, 1>>&,向量map
+ */
+std::map<unsigned int, Eigen::Matrix<float, 3, 1>> &get_t_map();
+
+void show_id_t();
+
+
 #endif
-
-
