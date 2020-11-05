@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/doudou/apriltag_test/lib/camera.cpp
+camera.h
+/home/doudou/apriltag_test/lib/camera.h
+
+/home/doudou/apriltag_test/lib/camera.h
+iostream
+-
+string
+-
+opencv2/opencv.hpp
+-
+common_param.h
+/home/doudou/apriltag_test/lib/common_param.h
+
+/home/doudou/apriltag_test/lib/common_param.h
+

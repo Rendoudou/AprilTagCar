@@ -1,0 +1,7 @@
+/snap/clion/129/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/doudou/apriltag_test
+-- apriltag_include dirs:/usr/local/include/apriltag
+-- apriltag_dir:/usr/local/share/apriltag/cmake
+-- apriltag_libs:/usr/local/lib/libapriltag.so;/usr/local/lib/libapriltag.so.3;/usr/local/lib/libapriltag.so.3.1.0
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/doudou/apriltag_test/cmake-build-debug
