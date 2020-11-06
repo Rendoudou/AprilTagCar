@@ -1,25 +1,25 @@
 Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
-Change Dir: /home/doudou/apriltag_test/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /home/doudou/apriltag_car/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_2491f/fast && /usr/bin/make  -f CMakeFiles/cmTC_2491f.dir/build.make CMakeFiles/cmTC_2491f.dir/build
-make[1]: Entering directory '/home/doudou/apriltag_test/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_2491f.dir/src.c.o
-/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_2491f.dir/src.c.o   -c /home/doudou/apriltag_test/cmake-build-debug/CMakeFiles/CMakeTmp/src.c
-Linking C executable cmTC_2491f
-/snap/clion/129/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2491f.dir/link.txt --verbose=1
-/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    -rdynamic CMakeFiles/cmTC_2491f.dir/src.c.o  -o cmTC_2491f 
-CMakeFiles/cmTC_2491f.dir/src.c.o：在函数‘main’中：
+Run Build Command(s):/usr/bin/make cmTC_553bb/fast && /usr/bin/make  -f CMakeFiles/cmTC_553bb.dir/build.make CMakeFiles/cmTC_553bb.dir/build
+make[1]: Entering directory '/home/doudou/apriltag_car/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_553bb.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_553bb.dir/src.c.o   -c /home/doudou/apriltag_car/cmake-build-debug/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_553bb
+/snap/clion/129/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_553bb.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    -rdynamic CMakeFiles/cmTC_553bb.dir/src.c.o  -o cmTC_553bb 
+CMakeFiles/cmTC_553bb.dir/src.c.o：在函数‘main’中：
 src.c:(.text+0x3c)：对‘pthread_create’未定义的引用
 src.c:(.text+0x48)：对‘pthread_detach’未定义的引用
 src.c:(.text+0x54)：对‘pthread_cancel’未定义的引用
 src.c:(.text+0x65)：对‘pthread_join’未定义的引用
 src.c:(.text+0x79)：对‘pthread_atfork’未定义的引用
 collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_2491f.dir/build.make:106: recipe for target 'cmTC_2491f' failed
-make[1]: *** [cmTC_2491f] Error 1
-make[1]: Leaving directory '/home/doudou/apriltag_test/cmake-build-debug/CMakeFiles/CMakeTmp'
-Makefile:141: recipe for target 'cmTC_2491f/fast' failed
-make: *** [cmTC_2491f/fast] Error 2
+CMakeFiles/cmTC_553bb.dir/build.make:106: recipe for target 'cmTC_553bb' failed
+make[1]: *** [cmTC_553bb] Error 1
+make[1]: Leaving directory '/home/doudou/apriltag_car/cmake-build-debug/CMakeFiles/CMakeTmp'
+Makefile:141: recipe for target 'cmTC_553bb/fast' failed
+make: *** [cmTC_553bb/fast] Error 2
 
 
 Source file was:
@@ -44,57 +44,22 @@ int main(void)
 }
 
 Determining if the function pthread_create exists in the pthreads failed with the following output:
-Change Dir: /home/doudou/apriltag_test/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /home/doudou/apriltag_car/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_22398/fast && /usr/bin/make  -f CMakeFiles/cmTC_22398.dir/build.make CMakeFiles/cmTC_22398.dir/build
-make[1]: Entering directory '/home/doudou/apriltag_test/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_22398.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_22398.dir/CheckFunctionExists.c.o   -c /snap/clion/129/bin/cmake/linux/share/cmake-3.17/Modules/CheckFunctionExists.c
-Linking C executable cmTC_22398
-/snap/clion/129/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_22398.dir/link.txt --verbose=1
-/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_22398.dir/CheckFunctionExists.c.o  -o cmTC_22398  -lpthreads 
+Run Build Command(s):/usr/bin/make cmTC_e81b5/fast && /usr/bin/make  -f CMakeFiles/cmTC_e81b5.dir/build.make CMakeFiles/cmTC_e81b5.dir/build
+make[1]: Entering directory '/home/doudou/apriltag_car/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_e81b5.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_e81b5.dir/CheckFunctionExists.c.o   -c /snap/clion/129/bin/cmake/linux/share/cmake-3.17/Modules/CheckFunctionExists.c
+Linking C executable cmTC_e81b5
+/snap/clion/129/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e81b5.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_e81b5.dir/CheckFunctionExists.c.o  -o cmTC_e81b5  -lpthreads 
 /usr/bin/ld: 找不到 -lpthreads
 collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_22398.dir/build.make:106: recipe for target 'cmTC_22398' failed
-make[1]: *** [cmTC_22398] Error 1
-make[1]: Leaving directory '/home/doudou/apriltag_test/cmake-build-debug/CMakeFiles/CMakeTmp'
-Makefile:141: recipe for target 'cmTC_22398/fast' failed
-make: *** [cmTC_22398/fast] Error 2
+CMakeFiles/cmTC_e81b5.dir/build.make:106: recipe for target 'cmTC_e81b5' failed
+make[1]: *** [cmTC_e81b5] Error 1
+make[1]: Leaving directory '/home/doudou/apriltag_car/cmake-build-debug/CMakeFiles/CMakeTmp'
+Makefile:141: recipe for target 'cmTC_e81b5/fast' failed
+make: *** [cmTC_e81b5/fast] Error 2
 
 
-
-Determining if the pthread_create exist failed with the following output:
-Change Dir: /home/doudou/apriltag_test/cmake-build-debug/CMakeFiles/CMakeTmp
-
-Run Build Command:"/usr/bin/make" "cmTC_9b1ee/fast"
-/usr/bin/make -f CMakeFiles/cmTC_9b1ee.dir/build.make CMakeFiles/cmTC_9b1ee.dir/build
-make[1]: Entering directory '/home/doudou/apriltag_test/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_9b1ee.dir/CheckSymbolExists.c.o
-/usr/bin/cc     -o CMakeFiles/cmTC_9b1ee.dir/CheckSymbolExists.c.o   -c /home/doudou/apriltag_test/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c
-Linking C executable cmTC_9b1ee
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9b1ee.dir/link.txt --verbose=1
-/usr/bin/cc       CMakeFiles/cmTC_9b1ee.dir/CheckSymbolExists.c.o  -o cmTC_9b1ee -rdynamic 
-CMakeFiles/cmTC_9b1ee.dir/CheckSymbolExists.c.o：在函数‘main’中：
-CheckSymbolExists.c:(.text+0x16)：对‘pthread_create’未定义的引用
-collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_9b1ee.dir/build.make:97: recipe for target 'cmTC_9b1ee' failed
-make[1]: *** [cmTC_9b1ee] Error 1
-make[1]: Leaving directory '/home/doudou/apriltag_test/cmake-build-debug/CMakeFiles/CMakeTmp'
-Makefile:126: recipe for target 'cmTC_9b1ee/fast' failed
-make: *** [cmTC_9b1ee/fast] Error 2
-
-File /home/doudou/apriltag_test/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
-/* */
-#include <pthread.h>
-
-int main(int argc, char** argv)
-{
-  (void)argv;
-#ifndef pthread_create
-  return ((int*)(&pthread_create))[argc];
-#else
-  (void)argc;
-  return 0;
-#endif
-}
 

@@ -11,6 +11,15 @@
 #include <ctime>
 #include "common_param.h"
 
+
+/*
+ * info return
+ */
+typedef struct {
+    double fps;
+}CameraInfo;
+
+
 /* bool video_input_init();
  * describe: 初始化检测视频的输入方式,默认为从摄像头采集。
  * param: void
@@ -43,14 +52,12 @@ cv::Mat &get_frame();
 bool update_frame();
 
 
-#ifdef FPS
-/* double get_fps()
- * describe: 返回fps
+/* CameraInfo &get_camera_info();
+ * describe: 返回外部需要的本文件信息
  * param: void
- * return: double,fps
+ * return: CameraInfo &,本文件部分信息
  */
-double get_fps();
-#endif
+CameraInfo &get_camera_info();
 
 
 #endif 

@@ -11,19 +11,17 @@ static apriltag_family_t *tf = nullptr;
 static apriltag_detector_t *td = nullptr;
 static const char *family_name = nullptr;
 static const char *famname = nullptr;
+static apriltag_detection_info_t camera_calib_info; // parameters of the camera calibrations
 //detect
-static apriltag_detection_info_t camera_calib_info; // parameters of the camera calibrations 
-static apriltag_pose_t tag_pose; // parameters of the tag pose R and t
-static std::map<unsigned int, Eigen::Matrix<float, 3, 3> > id_H_map;
-static std::map<unsigned int, Eigen::Matrix<float, 3, 3> > id_R_map;
-static std::map<unsigned int, Eigen::Matrix<float, 3, 1> > id_t_map;
 static Eigen::Matrix<float, 3, 3> H_matrix;/* NOLINT */
 static Eigen::Matrix<float, 3, 3> R_matrix;/* NOLINT */
 static Eigen::Matrix<float, 3, 1> t_matrix;/* NOLINT */
 static cv::Mat frame_copy;/* NOLINT */
 static cv::Mat frame_gray;/* NOLINT */
+static apriltag_pose_t tag_pose; // parameters of the tag pose R and t
 static zarray_t *detections;
 static apriltag_detection_t *det;
+static TagDetectInfo tag_detect_info;
 
 //static function
 static bool init_tf();
@@ -122,10 +120,11 @@ cv::Mat& tag_detect(cv::Mat& frame_in) {
             .buf = frame_gray.data
     };
 
+    //检测图标，清空上次检测留下的数据
     detections = apriltag_detector_detect(td, &im);
-    id_H_map.clear();
-    id_R_map.clear();
-    id_t_map.clear();
+    tag_detect_info.id_H_map.clear();
+    tag_detect_info.id_R_map.clear();
+    tag_detect_info.id_t_map.clear();
 
     // Draw detection outlines
     for (int i = 0; i < zarray_size(detections); i++) {
@@ -159,7 +158,7 @@ cv::Mat& tag_detect(cv::Mat& frame_in) {
         for (int m = 0; m < (det->H)->nrows; m++)
             for (int n = 0; n < (det->H)->ncols; n++)
                 H_matrix(m, n) = (det->H)->data[m * (det->H)->ncols + n];
-        id_H_map[det->id] = H_matrix; //H
+        tag_detect_info.id_H_map[det->id] = H_matrix; //H
 
         camera_calib_info.det = det;
         estimate_pose_for_tag_homography(&camera_calib_info, &tag_pose); //estimate_pose
@@ -167,11 +166,11 @@ cv::Mat& tag_detect(cv::Mat& frame_in) {
         for (int m = 0; m < (tag_pose.R)->nrows; m++)
             for (int n = 0; n < (tag_pose.R)->ncols; n++)
                 R_matrix(m, n) = (tag_pose.R)->data[m * (tag_pose.R)->ncols + n];
-        id_R_map[det->id] = R_matrix; //R
+        tag_detect_info.id_R_map[det->id] = R_matrix; //R
 
         for (int k = 0; k < 3; k++)
             t_matrix(k, 0) = (tag_pose.t)->data[k];
-        id_t_map[det->id] = t_matrix; //t
+        tag_detect_info.id_t_map[det->id] = t_matrix; //t
     }
     apriltag_detections_destroy(detections);
     return frame_copy;
@@ -208,77 +207,9 @@ bool release_tdtfopt() {
 }
 
 
-//interface to user_interface
-/* std::map<unsigned int, Eigen::Matrix<float, 3, 3>> &get_H_map();
- * 返回单应性矩阵信息
+/* TagDetectInfo &get_tag_detect_info();
+ * 返回外部需要的本文件信息
  */
-std::map<unsigned int, Eigen::Matrix<float, 3, 3>> &get_H_map(){
-    return id_H_map;
-}
-
-
-/* std::map<unsigned int, Eigen::Matrix<float, 3, 3>> &get_R_map();
- * 返回估算旋转矩阵信息
- */
-std::map<unsigned int, Eigen::Matrix<float, 3, 3>> &get_R_map(){
-    return id_R_map;
-}
-
-
-/* std::map<unsigned int, Eigen::Matrix<float, 3, 1>> &get_t_map();
- * 返回估算平移向量信息
- */
-std::map<unsigned int, Eigen::Matrix<float, 3, 1>> &get_t_map(){
-    return id_t_map;
-}
-
-
-/* void show_id_H(void)
- * 显示id单应性矩阵
- */
-void show_id_H() {
-    std::map<unsigned int, Eigen::Matrix<float, 3, 3>>::iterator pm = id_H_map.begin();/* NOLINT */
-    if (!id_H_map.empty()) {
-        for (pm; pm != id_H_map.end(); pm++) {
-            std::cout << "Tag id " << pm->first << +" Homography matrix:" << std::endl;
-            std::cout << pm->second << std::endl;
-        }
-    } else
-        std::cout << "Id_H_map is empty!" << std::endl;
-
-    std::cout << std::endl;
-}
-
-
-/* void show_id_R(void)
- * 显示id旋转矩阵
- */
-void show_id_R() {
-    std::map<unsigned int, Eigen::Matrix<float, 3, 3>>::iterator pm = id_R_map.begin();/* NOLINT */
-    if (!id_R_map.empty()) {
-        for (pm; pm != id_R_map.end(); pm++) {
-            std::cout << "Tag id " << pm->first << +" Rotation matrix:" << std::endl;
-            std::cout << pm->second << std::endl;
-        }
-    } else
-        std::cout << "Id_R_map is empty!" << std::endl;
-
-    std::cout << std::endl;
-}
-
-
-/* void show_id_t(void)
- * 显示id平移信息
- */
-void show_id_t() {
-    std::map<unsigned int, Eigen::Matrix<float, 3, 1>>::iterator pm = id_t_map.begin();/* NOLINT */
-    if (!id_t_map.empty()) {
-        for (pm; pm != id_t_map.end(); pm++) {
-            std::cout << "Tag id " << pm->first << +" t vector: ";
-            std::cout << (pm->second).transpose() << " length: " << (pm->second).norm() << std::endl;
-        }
-    } else
-        std::cout << "Id_t_map is empty!" << std::endl;
-
-    std::cout << std::endl;
+TagDetectInfo &get_tag_detect_info(){
+    return tag_detect_info;
 }

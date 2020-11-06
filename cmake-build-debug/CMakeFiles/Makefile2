@@ -64,10 +64,10 @@ RM = /snap/clion/129/bin/cmake/linux/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/doudou/apriltag_test
+CMAKE_SOURCE_DIR = /home/doudou/apriltag_car
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/doudou/apriltag_test/cmake-build-debug
+CMAKE_BINARY_DIR = /home/doudou/apriltag_car/cmake-build-debug
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -120,14 +120,14 @@ CMakeFiles/AprilTagCar.dir/all: lib/CMakeFiles/tag_detect_shared.dir/all
 CMakeFiles/AprilTagCar.dir/all: lib/CMakeFiles/user_interface_shared.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/AprilTagCar.dir/build.make CMakeFiles/AprilTagCar.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/AprilTagCar.dir/build.make CMakeFiles/AprilTagCar.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/doudou/apriltag_test/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target AprilTagCar"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/doudou/apriltag_car/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target AprilTagCar"
 .PHONY : CMakeFiles/AprilTagCar.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/AprilTagCar.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/doudou/apriltag_test/cmake-build-debug/CMakeFiles 8
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/doudou/apriltag_car/cmake-build-debug/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/AprilTagCar.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/doudou/apriltag_test/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/doudou/apriltag_car/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/AprilTagCar.dir/rule
 
 # Convenience name for target.
@@ -147,14 +147,14 @@ CMakeFiles/AprilTagCar.dir/clean:
 lib/CMakeFiles/camera_shared.dir/all:
 	$(MAKE) $(MAKESILENT) -f lib/CMakeFiles/camera_shared.dir/build.make lib/CMakeFiles/camera_shared.dir/depend
 	$(MAKE) $(MAKESILENT) -f lib/CMakeFiles/camera_shared.dir/build.make lib/CMakeFiles/camera_shared.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/doudou/apriltag_test/cmake-build-debug/CMakeFiles --progress-num=3,4 "Built target camera_shared"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/doudou/apriltag_car/cmake-build-debug/CMakeFiles --progress-num=3,4 "Built target camera_shared"
 .PHONY : lib/CMakeFiles/camera_shared.dir/all
 
 # Build rule for subdir invocation for target.
 lib/CMakeFiles/camera_shared.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/doudou/apriltag_test/cmake-build-debug/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/doudou/apriltag_car/cmake-build-debug/CMakeFiles 2
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/CMakeFiles/camera_shared.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/doudou/apriltag_test/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/doudou/apriltag_car/cmake-build-debug/CMakeFiles 0
 .PHONY : lib/CMakeFiles/camera_shared.dir/rule
 
 # Convenience name for target.
@@ -174,14 +174,14 @@ lib/CMakeFiles/camera_shared.dir/clean:
 lib/CMakeFiles/tag_detect_shared.dir/all:
 	$(MAKE) $(MAKESILENT) -f lib/CMakeFiles/tag_detect_shared.dir/build.make lib/CMakeFiles/tag_detect_shared.dir/depend
 	$(MAKE) $(MAKESILENT) -f lib/CMakeFiles/tag_detect_shared.dir/build.make lib/CMakeFiles/tag_detect_shared.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/doudou/apriltag_test/cmake-build-debug/CMakeFiles --progress-num=5,6 "Built target tag_detect_shared"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/doudou/apriltag_car/cmake-build-debug/CMakeFiles --progress-num=5,6 "Built target tag_detect_shared"
 .PHONY : lib/CMakeFiles/tag_detect_shared.dir/all
 
 # Build rule for subdir invocation for target.
 lib/CMakeFiles/tag_detect_shared.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/doudou/apriltag_test/cmake-build-debug/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/doudou/apriltag_car/cmake-build-debug/CMakeFiles 2
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/CMakeFiles/tag_detect_shared.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/doudou/apriltag_test/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/doudou/apriltag_car/cmake-build-debug/CMakeFiles 0
 .PHONY : lib/CMakeFiles/tag_detect_shared.dir/rule
 
 # Convenience name for target.
@@ -201,14 +201,14 @@ lib/CMakeFiles/tag_detect_shared.dir/clean:
 lib/CMakeFiles/user_interface_shared.dir/all: lib/CMakeFiles/tag_detect_shared.dir/all
 	$(MAKE) $(MAKESILENT) -f lib/CMakeFiles/user_interface_shared.dir/build.make lib/CMakeFiles/user_interface_shared.dir/depend
 	$(MAKE) $(MAKESILENT) -f lib/CMakeFiles/user_interface_shared.dir/build.make lib/CMakeFiles/user_interface_shared.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/doudou/apriltag_test/cmake-build-debug/CMakeFiles --progress-num=7,8 "Built target user_interface_shared"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/doudou/apriltag_car/cmake-build-debug/CMakeFiles --progress-num=7,8 "Built target user_interface_shared"
 .PHONY : lib/CMakeFiles/user_interface_shared.dir/all
 
 # Build rule for subdir invocation for target.
 lib/CMakeFiles/user_interface_shared.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/doudou/apriltag_test/cmake-build-debug/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/doudou/apriltag_car/cmake-build-debug/CMakeFiles 4
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/CMakeFiles/user_interface_shared.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/doudou/apriltag_test/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/doudou/apriltag_car/cmake-build-debug/CMakeFiles 0
 .PHONY : lib/CMakeFiles/user_interface_shared.dir/rule
 
 # Convenience name for target.

@@ -6,5 +6,5 @@ CXX_FLAGS = -g   -std=c++11
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/usr/local/include/apriltag -I/usr/include/eigen3 -I/home/doudou/apriltag_test/lib -isystem /usr/local/include/opencv 
+CXX_INCLUDES = -I/usr/local/include/apriltag -I/usr/include/eigen3 -I/home/doudou/apriltag_car/lib -isystem /usr/local/include/opencv 
 

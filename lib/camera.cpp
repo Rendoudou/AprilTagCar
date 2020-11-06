@@ -9,11 +9,7 @@ using namespace cv;
 static cv::Mat frame;/* NOLINT */
 static cv::Mat screen_saver;/* NOLINT */
 static cv::VideoCapture cap;/* NOLINT */
-#ifdef FPS
-static clock_t t_start, t_end;
-static double frame_per_second = 0.0;
-static bool time_record_flag = true;
-#endif
+static CameraInfo camera_info;
 
 //static function
 static bool load_screen_saver(const std::string &path);
@@ -69,18 +65,20 @@ cv::Mat &get_frame() {
  * describe: update frame
  */
 static bool load_saver_flag = true;
+static clock_t t_start, t_end;
+static bool time_record_flag = true;
 bool update_frame(){
-#ifdef FPS
+
     if(time_record_flag){
         t_start = clock();
         time_record_flag = false;
     }
     else{
         t_end = clock();
-        frame_per_second = 1.0 / ((double)(t_end - t_start)/CLOCKS_PER_SEC);
+        camera_info.fps = 1.0 / ((double)(t_end - t_start)/CLOCKS_PER_SEC);
         time_record_flag = true;
     }
-#endif
+
     if (frame_num == 0) //camera
         cap >> frame;
     else { //video
@@ -99,11 +97,9 @@ bool update_frame(){
 }
 
 
-#ifdef FPS
-/* double get_fps()
- * 返回fps
+/* CameraInfo &get_camera_info();
+ * 返回外部需要的本文件信息
  */
-double get_fps(){
-    return frame_per_second;
+CameraInfo &get_camera_info(){
+    return camera_info;
 }
-#endif

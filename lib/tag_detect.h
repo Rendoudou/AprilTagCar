@@ -28,6 +28,16 @@ extern "C" {
 }
 
 
+/*
+ * info return
+ */
+typedef struct {
+    std::map<unsigned int, Eigen::Matrix<float, 3, 3>> id_H_map;
+    std::map<unsigned int, Eigen::Matrix<float, 3, 3>> id_R_map;
+    std::map<unsigned int, Eigen::Matrix<float, 3, 1>> id_t_map;
+}TagDetectInfo;
+
+
 /* cv::Mat& tag_detect(cv::Mat& frame_in);
  * describe: 标签检测
  * param: cv::Mat&, frame_in, 输入图像。
@@ -52,34 +62,12 @@ bool tag_detect_init();
 bool release_tdtfopt();
 
 
-/* std::map<unsigned int, Eigen::Matrix<float, 3, 3>> &get_H_map();
- * describe: 返回单应性矩阵信息
+/* TagDetectInfo &get_tag_detect_info();
+ * describe: 返回外部需要的本文件信息
  * param: void
- * return: std::map<unsigned int, Eigen::Matrix<float, 3, 3>>&,矩阵map
+ * return: TagDetectInfo &,本文件部分信息
  */
-std::map<unsigned int, Eigen::Matrix<float, 3, 3>> &get_H_map();
-
-void show_id_H();
-
-
-/* std::map<unsigned int, Eigen::Matrix<float, 3, 3>> &get_R_map();
- * describe: 返回估算旋转矩阵信息
- * param: void
- * return: std::map<unsigned int, Eigen::Matrix<float, 3, 3>>&,矩阵map
- */
-std::map<unsigned int, Eigen::Matrix<float, 3, 3>> &get_R_map();
-
-void show_id_R();
-
-
-/* std::map<unsigned int, Eigen::Matrix<float, 3, 1>> &get_t_map();
- * describe: 返回估算平移向量信息
- * param: void
- * return: std::map<unsigned int, Eigen::Matrix<float, 3, 1>>&,向量map
- */
-std::map<unsigned int, Eigen::Matrix<float, 3, 1>> &get_t_map();
-
-void show_id_t();
+TagDetectInfo &get_tag_detect_info();
 
 
 #endif

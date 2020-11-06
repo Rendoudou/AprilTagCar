@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/doudou/apriltag_test/lib/tag_detect.cpp" "/home/doudou/apriltag_test/cmake-build-debug/lib/CMakeFiles/tag_detect_shared.dir/tag_detect.cpp.o"
+  "/home/doudou/apriltag_car/lib/tag_detect.cpp" "/home/doudou/apriltag_car/cmake-build-debug/lib/CMakeFiles/tag_detect_shared.dir/tag_detect.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

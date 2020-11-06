@@ -9,13 +9,16 @@
 int main() {
 
     //init
-    //if (video_input_init(VIDEO_PATH, "../source/fixed_distance.jpg"))
     if (video_input_init())
         std::cout << "init camera success" << std::endl;
     else
         return -1;
     if (tag_detect_init())
         std::cout << "init detect success" << std::endl;
+    else
+        return -1;
+    if (summary_info_init())
+        std::cout << "init user success" << std::endl;
     else
         return -1;
 

@@ -6,8 +6,16 @@
 
 #include <iostream>
 #include <map>
-#include "tag_detect.h"
 #include "camera.h"
+#include "tag_detect.h"
+
+/* void summary_info();
+ * describe: 信息汇总
+ * param: void
+ * return: void
+ */
+bool summary_info_init();
+
 
 /* void show_tag_info();
  * describe: 信息汇总

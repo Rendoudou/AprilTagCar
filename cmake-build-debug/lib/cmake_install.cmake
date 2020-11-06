@@ -1,4 +1,4 @@
-# Install script for directory: /home/doudou/apriltag_test/lib
+# Install script for directory: /home/doudou/apriltag_car/lib
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
