@@ -41,7 +41,7 @@ void show_tag_info() {
 static bool show_id_H(const TagDetectInfo &info) {
     auto pm = info.id_H_map.begin();/* NOLINT */
     if (!info.id_H_map.empty()) {
-        for (pm; pm != info.id_H_map.end(); pm++) {
+        for (; pm != info.id_H_map.end(); pm++) {
             std::cout << "Tag id " << pm->first << +" Homography matrix:" << std::endl;
             std::cout << pm->second << std::endl;
         }
@@ -59,7 +59,7 @@ static bool show_id_H(const TagDetectInfo &info) {
 static bool show_id_R(const TagDetectInfo &info) {
     auto pm = info.id_R_map.begin();/* NOLINT */
     if (!info.id_R_map.empty()) {
-        for (pm; pm != info.id_R_map.end(); pm++) {
+        for (; pm != info.id_R_map.end(); pm++) {
             std::cout << "Tag id " << pm->first << +" Rotation matrix:" << std::endl;
             std::cout << pm->second << std::endl;
         }
@@ -77,7 +77,7 @@ static bool show_id_R(const TagDetectInfo &info) {
 static bool show_id_t(const TagDetectInfo &info) {
     auto pm = info.id_t_map.begin();/* NOLINT */
     if (!info.id_t_map.empty()) {
-        for (pm; pm != info.id_t_map.end(); pm++) {
+        for (; pm != info.id_t_map.end(); pm++) {
             std::cout << "Tag id " << pm->first << +" t vector: ";
             std::cout << (pm->second).transpose() << " length: " << (pm->second).norm() << std::endl;
         }

@@ -157,6 +157,19 @@ camera_shared/fast:
 .PHONY : camera_shared/fast
 
 #=============================================================================
+# Target rules for targets named id_translate_shared
+
+# Build rule for target.
+id_translate_shared: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 id_translate_shared
+.PHONY : id_translate_shared
+
+# fast build rule for target.
+id_translate_shared/fast:
+	$(MAKE) $(MAKESILENT) -f lib/CMakeFiles/id_translate_shared.dir/build.make lib/CMakeFiles/id_translate_shared.dir/build
+.PHONY : id_translate_shared/fast
+
+#=============================================================================
 # Target rules for targets named tag_detect_shared
 
 # Build rule for target.
@@ -219,6 +232,7 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... AprilTagCar"
 	@echo "... camera_shared"
+	@echo "... id_translate_shared"
 	@echo "... tag_detect_shared"
 	@echo "... user_interface_shared"
 	@echo "... apriltag_car.o"

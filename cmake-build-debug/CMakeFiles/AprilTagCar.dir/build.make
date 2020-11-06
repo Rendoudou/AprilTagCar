@@ -100,6 +100,7 @@ AprilTagCar_EXTERNAL_OBJECTS =
 AprilTagCar: CMakeFiles/AprilTagCar.dir/apriltag_car.cpp.o
 AprilTagCar: CMakeFiles/AprilTagCar.dir/build.make
 AprilTagCar: lib/libcamera_shared.so
+AprilTagCar: lib/libid_translate_shared.so
 AprilTagCar: lib/libuser_interface_shared.so
 AprilTagCar: lib/libtag_detect_shared.so
 AprilTagCar: /usr/local/lib/libopencv_objdetect.so.3.4.5

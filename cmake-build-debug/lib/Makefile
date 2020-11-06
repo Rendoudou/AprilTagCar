@@ -146,6 +146,21 @@ camera_shared/fast:
 .PHONY : camera_shared/fast
 
 # Convenience name for target.
+lib/CMakeFiles/id_translate_shared.dir/rule:
+	cd /home/doudou/apriltag_car/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/CMakeFiles/id_translate_shared.dir/rule
+.PHONY : lib/CMakeFiles/id_translate_shared.dir/rule
+
+# Convenience name for target.
+id_translate_shared: lib/CMakeFiles/id_translate_shared.dir/rule
+
+.PHONY : id_translate_shared
+
+# fast build rule for target.
+id_translate_shared/fast:
+	cd /home/doudou/apriltag_car/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/id_translate_shared.dir/build.make lib/CMakeFiles/id_translate_shared.dir/build
+.PHONY : id_translate_shared/fast
+
+# Convenience name for target.
 lib/CMakeFiles/tag_detect_shared.dir/rule:
 	cd /home/doudou/apriltag_car/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/CMakeFiles/tag_detect_shared.dir/rule
 .PHONY : lib/CMakeFiles/tag_detect_shared.dir/rule
@@ -201,6 +216,33 @@ camera.s: camera.cpp.s
 camera.cpp.s:
 	cd /home/doudou/apriltag_car/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/camera_shared.dir/build.make lib/CMakeFiles/camera_shared.dir/camera.cpp.s
 .PHONY : camera.cpp.s
+
+id_translate.o: id_translate.cpp.o
+
+.PHONY : id_translate.o
+
+# target to build an object file
+id_translate.cpp.o:
+	cd /home/doudou/apriltag_car/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/id_translate_shared.dir/build.make lib/CMakeFiles/id_translate_shared.dir/id_translate.cpp.o
+.PHONY : id_translate.cpp.o
+
+id_translate.i: id_translate.cpp.i
+
+.PHONY : id_translate.i
+
+# target to preprocess a source file
+id_translate.cpp.i:
+	cd /home/doudou/apriltag_car/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/id_translate_shared.dir/build.make lib/CMakeFiles/id_translate_shared.dir/id_translate.cpp.i
+.PHONY : id_translate.cpp.i
+
+id_translate.s: id_translate.cpp.s
+
+.PHONY : id_translate.s
+
+# target to generate assembly for a file
+id_translate.cpp.s:
+	cd /home/doudou/apriltag_car/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/id_translate_shared.dir/build.make lib/CMakeFiles/id_translate_shared.dir/id_translate.cpp.s
+.PHONY : id_translate.cpp.s
 
 tag_detect.o: tag_detect.cpp.o
 
@@ -265,11 +307,15 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... camera_shared"
+	@echo "... id_translate_shared"
 	@echo "... tag_detect_shared"
 	@echo "... user_interface_shared"
 	@echo "... camera.o"
 	@echo "... camera.i"
 	@echo "... camera.s"
+	@echo "... id_translate.o"
+	@echo "... id_translate.i"
+	@echo "... id_translate.s"
 	@echo "... tag_detect.o"
 	@echo "... tag_detect.i"
 	@echo "... tag_detect.s"

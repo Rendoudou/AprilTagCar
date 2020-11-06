@@ -1,0 +1,1 @@
+/usr/bin/c++ -fPIC -g  -shared -Wl,-soname,libid_translate_shared.so -o libid_translate_shared.so CMakeFiles/id_translate_shared.dir/id_translate.cpp.o 

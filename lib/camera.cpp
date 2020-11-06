@@ -68,7 +68,6 @@ static bool load_saver_flag = true;
 static clock_t t_start, t_end;
 static bool time_record_flag = true;
 bool update_frame(){
-
     if(time_record_flag){
         t_start = clock();
         time_record_flag = false;

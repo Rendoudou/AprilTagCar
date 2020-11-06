@@ -28,6 +28,7 @@ include_directories(lib)
 set(My_LIBS
         camera_shared
         tag_detect_shared
+        id_translate_shared
         user_interface_shared
 )
 

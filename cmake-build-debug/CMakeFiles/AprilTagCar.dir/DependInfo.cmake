@@ -19,6 +19,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
   "/home/doudou/apriltag_car/cmake-build-debug/lib/CMakeFiles/camera_shared.dir/DependInfo.cmake"
+  "/home/doudou/apriltag_car/cmake-build-debug/lib/CMakeFiles/id_translate_shared.dir/DependInfo.cmake"
   "/home/doudou/apriltag_car/cmake-build-debug/lib/CMakeFiles/user_interface_shared.dir/DependInfo.cmake"
   "/home/doudou/apriltag_car/cmake-build-debug/lib/CMakeFiles/tag_detect_shared.dir/DependInfo.cmake"
   )

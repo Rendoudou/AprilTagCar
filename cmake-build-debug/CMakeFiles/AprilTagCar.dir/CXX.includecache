@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/doudou/apriltag_car/lib/camera.h
+../lib/camera.h
 iostream
 -
 string
@@ -16,11 +16,11 @@ opencv2/opencv.hpp
 ctime
 -
 common_param.h
-/home/doudou/apriltag_car/lib/common_param.h
+../lib/common_param.h
 
-/home/doudou/apriltag_car/lib/common_param.h
+../lib/common_param.h
 
-/home/doudou/apriltag_car/lib/tag_detect.h
+../lib/tag_detect.h
 iostream
 -
 string
@@ -32,45 +32,51 @@ map
 Eigen/Core
 -
 common_param.h
-/home/doudou/apriltag_car/lib/common_param.h
+../lib/common_param.h
 apriltag.h
-/home/doudou/apriltag_car/lib/apriltag.h
+../lib/apriltag.h
 apriltag_pose.h
-/home/doudou/apriltag_car/lib/apriltag_pose.h
+../lib/apriltag_pose.h
 tag36h11.h
-/home/doudou/apriltag_car/lib/tag36h11.h
+../lib/tag36h11.h
 tag25h9.h
-/home/doudou/apriltag_car/lib/tag25h9.h
+../lib/tag25h9.h
 tag16h5.h
-/home/doudou/apriltag_car/lib/tag16h5.h
+../lib/tag16h5.h
 tagCircle21h7.h
-/home/doudou/apriltag_car/lib/tagCircle21h7.h
+../lib/tagCircle21h7.h
 tagCircle49h12.h
-/home/doudou/apriltag_car/lib/tagCircle49h12.h
+../lib/tagCircle49h12.h
 tagCustom48h12.h
-/home/doudou/apriltag_car/lib/tagCustom48h12.h
+../lib/tagCustom48h12.h
 tagStandard41h12.h
-/home/doudou/apriltag_car/lib/tagStandard41h12.h
+../lib/tagStandard41h12.h
 tagStandard52h13.h
-/home/doudou/apriltag_car/lib/tagStandard52h13.h
+../lib/tagStandard52h13.h
 common/getopt.h
-/home/doudou/apriltag_car/lib/common/getopt.h
+../lib/common/getopt.h
 common/homography.h
-/home/doudou/apriltag_car/lib/common/homography.h
+../lib/common/homography.h
 
-/home/doudou/apriltag_car/lib/user_interface.cpp
-user_interface.h
-/home/doudou/apriltag_car/lib/user_interface.h
-
-/home/doudou/apriltag_car/lib/user_interface.h
+../lib/user_interface.h
 iostream
 -
 map
 -
 camera.h
-/home/doudou/apriltag_car/lib/camera.h
+../lib/camera.h
 tag_detect.h
-/home/doudou/apriltag_car/lib/tag_detect.h
+../lib/tag_detect.h
+
+/home/doudou/apriltag_car/apriltag_car.cpp
+camera.h
+/home/doudou/apriltag_car/camera.h
+tag_detect.h
+/home/doudou/apriltag_car/tag_detect.h
+user_interface.h
+/home/doudou/apriltag_car/user_interface.h
+common_param.h
+/home/doudou/apriltag_car/common_param.h
 
 /usr/include/eigen3/Eigen/Core
 src/Core/util/DisableStupidWarnings.h

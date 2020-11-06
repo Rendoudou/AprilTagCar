@@ -1,8 +1,8 @@
 //
 // Created by doudou on 2020/11/5.
 //
-#ifndef APRILTAG_TEST_USER_INTERFACE_H
-#define APRILTAG_TEST_USER_INTERFACE_H
+#ifndef _USER_INTERFACE_H_
+#define _USER_INTERFACE_H_
 
 #include <iostream>
 #include <map>

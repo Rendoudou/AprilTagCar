@@ -35,6 +35,7 @@ typedef struct {
     std::map<unsigned int, Eigen::Matrix<float, 3, 3>> id_H_map;
     std::map<unsigned int, Eigen::Matrix<float, 3, 3>> id_R_map;
     std::map<unsigned int, Eigen::Matrix<float, 3, 1>> id_t_map;
+    std::vector<int> ids;
 }TagDetectInfo;
 
 

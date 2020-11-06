@@ -1,8 +1,8 @@
 //
 // Created by doudou on 2020/11/5.
 //
-#ifndef APRILTAG_TEST_COMMON_PARAM_H
-#define APRILTAG_TEST_COMMON_PARAM_H
+#ifndef _COMMON_PARAM_H_
+#define _COMMON_PARAM_H_
 
 /*****init*****/
 /*camera*/

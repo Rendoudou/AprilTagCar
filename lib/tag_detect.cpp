@@ -2,6 +2,7 @@
 // Created by doudou on 2020/11/4.
 //
 #include "tag_detect.h"
+
 using namespace cv;
 
 //static params
@@ -12,6 +13,7 @@ static apriltag_detector_t *td = nullptr;
 static const char *family_name = nullptr;
 static const char *famname = nullptr;
 static apriltag_detection_info_t camera_calib_info; // parameters of the camera calibrations
+
 //detect
 static Eigen::Matrix<float, 3, 3> H_matrix;/* NOLINT */
 static Eigen::Matrix<float, 3, 3> R_matrix;/* NOLINT */
@@ -21,10 +23,17 @@ static cv::Mat frame_gray;/* NOLINT */
 static apriltag_pose_t tag_pose; // parameters of the tag pose R and t
 static zarray_t *detections;
 static apriltag_detection_t *det;
-static TagDetectInfo tag_detect_info;
+static TagDetectInfo tag_detect_info; // return info
+
+//show tag id
+static int font_face = FONT_HERSHEY_SCRIPT_SIMPLEX;
+static double font_scale = 1.0;
+static int baseline;
+static Size text_size;/* NOLINT */
 
 //static function
 static bool init_tf();
+
 static bool init_td();
 
 
@@ -71,8 +80,8 @@ static bool init_tf() {
  */
 static bool init_td() {
     apriltag_detector_add_family(td, tf);
-    td->quad_decimate = getopt_get_double(getopt_tag, "decimate");
-    td->quad_sigma = getopt_get_double(getopt_tag, "blur");
+    td->quad_decimate = static_cast<float>(getopt_get_double(getopt_tag, "decimate"));
+    td->quad_sigma = static_cast<float>(getopt_get_double(getopt_tag, "blur"));
     td->nthreads = getopt_get_int(getopt_tag, "threads");
     td->debug = getopt_get_bool(getopt_tag, "debug");
     td->refine_edges = getopt_get_bool(getopt_tag, "refine-edges");
@@ -88,7 +97,7 @@ bool tag_detect_init() {
         return true;
 
     family_name = FAMILY; //set tag family
-    camera_calib_info.tagsize = TAG_SIZE;
+    camera_calib_info.tagsize = TAG_SIZE; //use camera k to estimate R and t
     camera_calib_info.fx = CAMERA_FX;
     camera_calib_info.fy = CAMERA_FY;
     camera_calib_info.cx = CAMERA_CX;
@@ -109,7 +118,7 @@ bool tag_detect_init() {
 /* cv::Mat& tag_detect(cv::Mat& frame_in);
  * 标签检测
  */
-cv::Mat& tag_detect(cv::Mat& frame_in) {
+cv::Mat &tag_detect(cv::Mat &frame_in) {
     frame_copy = frame_in.clone();
     cv::cvtColor(frame_copy, frame_gray, cv::COLOR_BGR2GRAY);
 
@@ -125,6 +134,7 @@ cv::Mat& tag_detect(cv::Mat& frame_in) {
     tag_detect_info.id_H_map.clear();
     tag_detect_info.id_R_map.clear();
     tag_detect_info.id_t_map.clear();
+    tag_detect_info.ids.clear();
 
     // Draw detection outlines
     for (int i = 0; i < zarray_size(detections); i++) {
@@ -142,19 +152,15 @@ cv::Mat& tag_detect(cv::Mat& frame_in) {
              Point(det->p[3][0], det->p[3][1]),
              Scalar(0xff, 0, 0), 2);
 
-        std::stringstream ss;
-        ss << det->id;
-        String text = ss.str();
-        int fontface = FONT_HERSHEY_SCRIPT_SIMPLEX;
-        double fontscale = 1.0;
-        int baseline;
-        Size textsize = getTextSize(text, fontface, fontscale, 2,
-                                    &baseline);
-        putText(frame_copy, text, Point(det->c[0] - textsize.width / 2,
-                                        det->c[1] + textsize.height / 2),
-                fontface, fontscale, Scalar(0xff, 0x99, 0), 2);
+        text_size = getTextSize(std::to_string(det->id), font_face, font_scale, 2,
+                                &baseline);
+        putText(frame_copy, std::to_string(det->id), Point(static_cast<int>(det->c[0]) - text_size.width / 2,
+                                                           static_cast<int>(det->c[1]) + text_size.height / 2),
+                font_face, font_scale, Scalar(0xff, 0x99, 0), 2);
 
         //save data
+        tag_detect_info.ids.push_back(det->id);
+
         for (int m = 0; m < (det->H)->nrows; m++)
             for (int n = 0; n < (det->H)->ncols; n++)
                 H_matrix(m, n) = (det->H)->data[m * (det->H)->ncols + n];
@@ -210,6 +216,6 @@ bool release_tdtfopt() {
 /* TagDetectInfo &get_tag_detect_info();
  * 返回外部需要的本文件信息
  */
-TagDetectInfo &get_tag_detect_info(){
+TagDetectInfo &get_tag_detect_info() {
     return tag_detect_info;
 }

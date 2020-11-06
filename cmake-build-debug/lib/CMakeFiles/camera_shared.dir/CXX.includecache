@@ -6,11 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/home/doudou/apriltag_test/lib/camera.cpp
+/home/doudou/apriltag_car/lib/camera.cpp
 camera.h
-/home/doudou/apriltag_test/lib/camera.h
+/home/doudou/apriltag_car/lib/camera.h
 
-/home/doudou/apriltag_test/lib/camera.h
+/home/doudou/apriltag_car/lib/camera.h
 iostream
 -
 string
@@ -20,7 +20,7 @@ opencv2/opencv.hpp
 ctime
 -
 common_param.h
-/home/doudou/apriltag_test/lib/common_param.h
+/home/doudou/apriltag_car/lib/common_param.h
 
-/home/doudou/apriltag_test/lib/common_param.h
+/home/doudou/apriltag_car/lib/common_param.h
 
