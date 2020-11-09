@@ -6,5 +6,5 @@ CXX_FLAGS = -g -fPIC   -std=c++11
 
 CXX_DEFINES = -Did_translate_shared_EXPORTS
 
-CXX_INCLUDES = -I/usr/local/include/opencv -I/usr/local/include/apriltag -I/usr/include/eigen3 
+CXX_INCLUDES = -I/usr/local/include/apriltag -I/usr/include/eigen3 -isystem /opt/ros/kinetic/include/opencv-3.3.1-dev -isystem /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv 
 

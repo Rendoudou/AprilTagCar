@@ -15,13 +15,15 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "/usr/local/include/opencv"
   "/usr/local/include/apriltag"
   "/usr/include/eigen3"
+  "/opt/ros/kinetic/include/opencv-3.3.1-dev"
+  "/opt/ros/kinetic/include/opencv-3.3.1-dev/opencv"
   )
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
+  "/home/doudou/apriltag_car/cmake-build-debug/lib/CMakeFiles/tag_detect_shared.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

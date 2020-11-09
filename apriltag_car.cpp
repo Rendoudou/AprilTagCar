@@ -2,6 +2,7 @@
 #include "camera.h"
 #include "tag_detect.h"
 #include "id_translate.h"
+#include "car_control.h"
 #include "user_interface.h"
 using namespace std;
 
@@ -20,7 +21,7 @@ typedef enum {
 /*init*/
 bool initialize_component(){
     //init
-    if (video_input_init())
+    if (video_input_init(VIDEO_PATH))
         cout << "init camera success" << endl;
     else
         return false;
@@ -28,12 +29,16 @@ bool initialize_component(){
         cout << "init detect success" << endl;
     else
         return false;
-    if (summary_info_init())
-        cout << "init user interface success" << endl;
-    else
-        return false;
     if(id_translate_init())
         cout << "init id translate success" << endl;
+    else
+        return false;
+    if(car_control_init())
+        cout << "init car control success" << endl;
+    else
+        return false;
+    if (summary_info_init())
+        cout << "init user interface success" << endl;
     else
         return false;
 
@@ -66,10 +71,8 @@ int main() {
                 status = TRANSLATE_ID;
                 break;
             case (TRANSLATE_ID):
-                if (renew_move_status())
-                    status = CAR_CONTROL;
-                else
-                    status = GET_FRAME;
+                renew_move_status();
+                status = CAR_CONTROL;
                 break;
             case (CAR_CONTROL):
 
@@ -80,8 +83,9 @@ int main() {
                 status = GET_FRAME;
                 break;
         }
-        if (cv::waitKey(5) == 'q')
-            break;
+        if(DETECT_TAG == status)
+            if (cv::waitKey(5) == 'q')
+                break;
     }
 
     //release source

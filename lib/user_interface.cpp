@@ -34,10 +34,12 @@ bool summary_info_init(){
  */
 void show_tag_info() {
     if(nullptr != tag_detect_p){
+        show_id_H(*tag_detect_p);
+        show_id_R(*tag_detect_p);
         show_id_t(*tag_detect_p);
     }
-    printf("MoveStatus is %03d.\n\n", id_translate_p->move_status);
-    //printf("Fps is %.2lf.\n\n",camera_p->fps);
+    //printf("MoveStatus is %03d now.\n\n", id_translate_p->move_status);
+    printf("Fps is %.2lf.\n\n",camera_p->fps);
 }
 
 

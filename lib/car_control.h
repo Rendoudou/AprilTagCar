@@ -1,8 +1,11 @@
 //
 // Created by doudou on 2020/11/5.
 //
-#include "id_translate.h"
+#ifndef _CAR_CONTROL_H_
+#define _CAR_CONTROL_H_
 
+#include <iostream>
+#include "id_translate.h"
 
 /*
  * limit
@@ -16,16 +19,38 @@
 /*
  * ApriltagCar类
  */
-class ApriltagCar{
+class ApriltagCar {
 
 public:
-    /* ApriltagCar(int speed);
+
+    ApriltagCar(const ApriltagCar &) = delete;
+
+    ApriltagCar &operator=(const ApriltagCar &) = delete;
+
+    /* static ApriltagCar& get_instance(double speed)
+     * describe: get instance
+     * param: speed,初始速度
+     * return: void
+     */
+    static ApriltagCar &get_instance(double speed);
+
+    /* ~ApriltagCar();
+     * describe: deconstruct
+     * param: void
+     * return: void
+     */
+    ~ApriltagCar();
+
+private:
+
+    /* ApriltagCar(double speed);
      * describe: 构造函数
      * param: int speed：初始化速度
      */
-    ApriltagCar(double speed);
+    explicit ApriltagCar(double speed);
 
-private:
+    /*private params*/
+    static ApriltagCar *apriltag_car_p;
     MoveStatus move_status;
     double speed;
     double x;
@@ -35,3 +60,13 @@ private:
     double angle_y;
     double angle_z;
 };
+
+/* bool car_control_init()
+ * describe: 初始化car control
+ * param: void
+ * return: bool,初始化结果
+ */
+bool car_control_init();
+
+
+#endif //_CAR_CONTROL_H_

@@ -5,36 +5,36 @@
 		<Option title="apriltag_test"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\usr\;CMake Files\..\..\..\usr\lib\;CMake Files\..\..\..\usr\lib\cmake\;CMake Files\..\..\..\usr\lib\cmake\eigen3\;CMake Files\..\..\..\usr\local\;CMake Files\..\..\..\usr\local\share\;CMake Files\..\..\..\usr\local\share\OpenCV\;CMake Files\..\..\..\usr\local\share\apriltag\;CMake Files\..\..\..\usr\local\share\apriltag\cmake\;CMake Files\lib\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\usr\;CMake Files\..\..\..\usr\lib\;CMake Files\..\..\..\usr\lib\cmake\;CMake Files\..\..\..\usr\lib\cmake\eigen3\;CMake Files\..\..\..\usr\local\;CMake Files\..\..\..\usr\local\share\;CMake Files\..\..\..\usr\local\share\apriltag\;CMake Files\..\..\..\usr\local\share\apriltag\cmake\;CMake Files\..\..\..\opt\;CMake Files\..\..\..\opt\ros\;CMake Files\..\..\..\opt\ros\kinetic\;CMake Files\..\..\..\opt\ros\kinetic\share\;CMake Files\..\..\..\opt\ros\kinetic\share\OpenCV-3.3.1-dev\;CMake Files\lib\;"/>
 		<Build>
 			<Target title="all">
 				<Option working_dir="/home/doudou/apriltag_car/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/doudou/apriltag_car/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/doudou/apriltag_car/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/doudou/apriltag_car/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/doudou/apriltag_car/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -f &quot;/home/doudou/apriltag_car/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/doudou/apriltag_car/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/doudou/apriltag_car/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/doudou/apriltag_car/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
 				<Option working_dir="/home/doudou/apriltag_car/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/doudou/apriltag_car/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/doudou/apriltag_car/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/doudou/apriltag_car/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/doudou/apriltag_car/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -f &quot;/home/doudou/apriltag_car/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/doudou/apriltag_car/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/doudou/apriltag_car/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/doudou/apriltag_car/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
 				<Option working_dir="/home/doudou/apriltag_car/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/doudou/apriltag_car/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/doudou/apriltag_car/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/doudou/apriltag_car/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/doudou/apriltag_car/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -f &quot;/home/doudou/apriltag_car/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/doudou/apriltag_car/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/doudou/apriltag_car/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/doudou/apriltag_car/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="AprilTagCar">
@@ -47,21 +47,14 @@
 					<Add directory="/usr/local/include/apriltag"/>
 					<Add directory="/usr/include/eigen3"/>
 					<Add directory="/home/doudou/apriltag_car/lib"/>
-					<Add directory="/usr/local/include/opencv"/>
-					<Add directory="/usr/include/c++/5"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
-					<Add directory="/usr/include/c++/5/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
+					<Add directory="/opt/ros/kinetic/include/opencv-3.3.1-dev"/>
+					<Add directory="/opt/ros/kinetic/include/opencv-3.3.1-dev/opencv"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/doudou/apriltag_car/cmake-build-debug/Makefile&quot;  VERBOSE=1 AprilTagCar"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/doudou/apriltag_car/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/doudou/apriltag_car/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/doudou/apriltag_car/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -f &quot;/home/doudou/apriltag_car/cmake-build-debug/Makefile&quot;  VERBOSE=1 AprilTagCar"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/doudou/apriltag_car/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/doudou/apriltag_car/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/doudou/apriltag_car/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="AprilTagCar/fast">
@@ -74,229 +67,14 @@
 					<Add directory="/usr/local/include/apriltag"/>
 					<Add directory="/usr/include/eigen3"/>
 					<Add directory="/home/doudou/apriltag_car/lib"/>
-					<Add directory="/usr/local/include/opencv"/>
-					<Add directory="/usr/include/c++/5"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
-					<Add directory="/usr/include/c++/5/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
+					<Add directory="/opt/ros/kinetic/include/opencv-3.3.1-dev"/>
+					<Add directory="/opt/ros/kinetic/include/opencv-3.3.1-dev/opencv"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/doudou/apriltag_car/cmake-build-debug/Makefile&quot;  VERBOSE=1 AprilTagCar/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/doudou/apriltag_car/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/doudou/apriltag_car/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/doudou/apriltag_car/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="car_control_shared">
-				<Option output="/home/doudou/apriltag_car/cmake-build-debug/lib/libcar_control_shared.so" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/doudou/apriltag_car/cmake-build-debug/lib"/>
-				<Option object_output="./"/>
-				<Option type="3"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/usr/local/include/opencv"/>
-					<Add directory="/usr/local/include/apriltag"/>
-					<Add directory="/usr/include/eigen3"/>
-					<Add directory="/usr/include/c++/5"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
-					<Add directory="/usr/include/c++/5/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/doudou/apriltag_car/cmake-build-debug/lib/Makefile&quot;  VERBOSE=1 car_control_shared"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/doudou/apriltag_car/cmake-build-debug/lib/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/doudou/apriltag_car/cmake-build-debug/lib/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/doudou/apriltag_car/cmake-build-debug/lib/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="car_control_shared/fast">
-				<Option output="/home/doudou/apriltag_car/cmake-build-debug/lib/libcar_control_shared.so" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/doudou/apriltag_car/cmake-build-debug/lib"/>
-				<Option object_output="./"/>
-				<Option type="3"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/usr/local/include/opencv"/>
-					<Add directory="/usr/local/include/apriltag"/>
-					<Add directory="/usr/include/eigen3"/>
-					<Add directory="/usr/include/c++/5"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
-					<Add directory="/usr/include/c++/5/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/doudou/apriltag_car/cmake-build-debug/lib/Makefile&quot;  VERBOSE=1 car_control_shared/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/doudou/apriltag_car/cmake-build-debug/lib/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/doudou/apriltag_car/cmake-build-debug/lib/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/doudou/apriltag_car/cmake-build-debug/lib/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="camera_shared">
-				<Option output="/home/doudou/apriltag_car/cmake-build-debug/lib/libcamera_shared.so" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/doudou/apriltag_car/cmake-build-debug/lib"/>
-				<Option object_output="./"/>
-				<Option type="3"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/usr/local/include/apriltag"/>
-					<Add directory="/usr/include/eigen3"/>
-					<Add directory="/usr/local/include/opencv"/>
-					<Add directory="/usr/include/c++/5"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
-					<Add directory="/usr/include/c++/5/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/doudou/apriltag_car/cmake-build-debug/lib/Makefile&quot;  VERBOSE=1 camera_shared"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/doudou/apriltag_car/cmake-build-debug/lib/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/doudou/apriltag_car/cmake-build-debug/lib/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/doudou/apriltag_car/cmake-build-debug/lib/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="camera_shared/fast">
-				<Option output="/home/doudou/apriltag_car/cmake-build-debug/lib/libcamera_shared.so" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/doudou/apriltag_car/cmake-build-debug/lib"/>
-				<Option object_output="./"/>
-				<Option type="3"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/usr/local/include/apriltag"/>
-					<Add directory="/usr/include/eigen3"/>
-					<Add directory="/usr/local/include/opencv"/>
-					<Add directory="/usr/include/c++/5"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
-					<Add directory="/usr/include/c++/5/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/doudou/apriltag_car/cmake-build-debug/lib/Makefile&quot;  VERBOSE=1 camera_shared/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/doudou/apriltag_car/cmake-build-debug/lib/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/doudou/apriltag_car/cmake-build-debug/lib/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/doudou/apriltag_car/cmake-build-debug/lib/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="id_translate_shared">
-				<Option output="/home/doudou/apriltag_car/cmake-build-debug/lib/libid_translate_shared.so" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/doudou/apriltag_car/cmake-build-debug/lib"/>
-				<Option object_output="./"/>
-				<Option type="3"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/usr/local/include/opencv"/>
-					<Add directory="/usr/local/include/apriltag"/>
-					<Add directory="/usr/include/eigen3"/>
-					<Add directory="/usr/include/c++/5"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
-					<Add directory="/usr/include/c++/5/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/doudou/apriltag_car/cmake-build-debug/lib/Makefile&quot;  VERBOSE=1 id_translate_shared"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/doudou/apriltag_car/cmake-build-debug/lib/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/doudou/apriltag_car/cmake-build-debug/lib/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/doudou/apriltag_car/cmake-build-debug/lib/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="id_translate_shared/fast">
-				<Option output="/home/doudou/apriltag_car/cmake-build-debug/lib/libid_translate_shared.so" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/doudou/apriltag_car/cmake-build-debug/lib"/>
-				<Option object_output="./"/>
-				<Option type="3"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/usr/local/include/opencv"/>
-					<Add directory="/usr/local/include/apriltag"/>
-					<Add directory="/usr/include/eigen3"/>
-					<Add directory="/usr/include/c++/5"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
-					<Add directory="/usr/include/c++/5/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/doudou/apriltag_car/cmake-build-debug/lib/Makefile&quot;  VERBOSE=1 id_translate_shared/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/doudou/apriltag_car/cmake-build-debug/lib/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/doudou/apriltag_car/cmake-build-debug/lib/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/doudou/apriltag_car/cmake-build-debug/lib/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="tag_detect_shared">
-				<Option output="/home/doudou/apriltag_car/cmake-build-debug/lib/libtag_detect_shared.so" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/doudou/apriltag_car/cmake-build-debug/lib"/>
-				<Option object_output="./"/>
-				<Option type="3"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/usr/local/include/apriltag"/>
-					<Add directory="/usr/include/eigen3"/>
-					<Add directory="/usr/local/include/opencv"/>
-					<Add directory="/usr/include/c++/5"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
-					<Add directory="/usr/include/c++/5/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/doudou/apriltag_car/cmake-build-debug/lib/Makefile&quot;  VERBOSE=1 tag_detect_shared"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/doudou/apriltag_car/cmake-build-debug/lib/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/doudou/apriltag_car/cmake-build-debug/lib/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/doudou/apriltag_car/cmake-build-debug/lib/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="tag_detect_shared/fast">
-				<Option output="/home/doudou/apriltag_car/cmake-build-debug/lib/libtag_detect_shared.so" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/doudou/apriltag_car/cmake-build-debug/lib"/>
-				<Option object_output="./"/>
-				<Option type="3"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/usr/local/include/apriltag"/>
-					<Add directory="/usr/include/eigen3"/>
-					<Add directory="/usr/local/include/opencv"/>
-					<Add directory="/usr/include/c++/5"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
-					<Add directory="/usr/include/c++/5/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/doudou/apriltag_car/cmake-build-debug/lib/Makefile&quot;  VERBOSE=1 tag_detect_shared/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/doudou/apriltag_car/cmake-build-debug/lib/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/doudou/apriltag_car/cmake-build-debug/lib/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/doudou/apriltag_car/cmake-build-debug/lib/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -f &quot;/home/doudou/apriltag_car/cmake-build-debug/Makefile&quot;  VERBOSE=1 AprilTagCar/fast"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/doudou/apriltag_car/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/doudou/apriltag_car/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/doudou/apriltag_car/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="user_interface_shared">
@@ -308,21 +86,14 @@
 				<Compiler>
 					<Add directory="/usr/local/include/apriltag"/>
 					<Add directory="/usr/include/eigen3"/>
-					<Add directory="/usr/local/include/opencv"/>
-					<Add directory="/usr/include/c++/5"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
-					<Add directory="/usr/include/c++/5/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
+					<Add directory="/opt/ros/kinetic/include/opencv-3.3.1-dev"/>
+					<Add directory="/opt/ros/kinetic/include/opencv-3.3.1-dev/opencv"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/doudou/apriltag_car/cmake-build-debug/lib/Makefile&quot;  VERBOSE=1 user_interface_shared"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/doudou/apriltag_car/cmake-build-debug/lib/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/doudou/apriltag_car/cmake-build-debug/lib/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/doudou/apriltag_car/cmake-build-debug/lib/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -f &quot;/home/doudou/apriltag_car/cmake-build-debug/lib/Makefile&quot;  VERBOSE=1 user_interface_shared"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/doudou/apriltag_car/cmake-build-debug/lib/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/doudou/apriltag_car/cmake-build-debug/lib/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/doudou/apriltag_car/cmake-build-debug/lib/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="user_interface_shared/fast">
@@ -334,21 +105,166 @@
 				<Compiler>
 					<Add directory="/usr/local/include/apriltag"/>
 					<Add directory="/usr/include/eigen3"/>
-					<Add directory="/usr/local/include/opencv"/>
-					<Add directory="/usr/include/c++/5"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
-					<Add directory="/usr/include/c++/5/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
+					<Add directory="/opt/ros/kinetic/include/opencv-3.3.1-dev"/>
+					<Add directory="/opt/ros/kinetic/include/opencv-3.3.1-dev/opencv"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/doudou/apriltag_car/cmake-build-debug/lib/Makefile&quot;  VERBOSE=1 user_interface_shared/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/doudou/apriltag_car/cmake-build-debug/lib/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/doudou/apriltag_car/cmake-build-debug/lib/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/doudou/apriltag_car/cmake-build-debug/lib/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -f &quot;/home/doudou/apriltag_car/cmake-build-debug/lib/Makefile&quot;  VERBOSE=1 user_interface_shared/fast"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/doudou/apriltag_car/cmake-build-debug/lib/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/doudou/apriltag_car/cmake-build-debug/lib/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/doudou/apriltag_car/cmake-build-debug/lib/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="camera_shared">
+				<Option output="/home/doudou/apriltag_car/cmake-build-debug/lib/libcamera_shared.so" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/doudou/apriltag_car/cmake-build-debug/lib"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/include/apriltag"/>
+					<Add directory="/usr/include/eigen3"/>
+					<Add directory="/opt/ros/kinetic/include/opencv-3.3.1-dev"/>
+					<Add directory="/opt/ros/kinetic/include/opencv-3.3.1-dev/opencv"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/doudou/apriltag_car/cmake-build-debug/lib/Makefile&quot;  VERBOSE=1 camera_shared"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/doudou/apriltag_car/cmake-build-debug/lib/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/doudou/apriltag_car/cmake-build-debug/lib/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/doudou/apriltag_car/cmake-build-debug/lib/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="camera_shared/fast">
+				<Option output="/home/doudou/apriltag_car/cmake-build-debug/lib/libcamera_shared.so" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/doudou/apriltag_car/cmake-build-debug/lib"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/include/apriltag"/>
+					<Add directory="/usr/include/eigen3"/>
+					<Add directory="/opt/ros/kinetic/include/opencv-3.3.1-dev"/>
+					<Add directory="/opt/ros/kinetic/include/opencv-3.3.1-dev/opencv"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/doudou/apriltag_car/cmake-build-debug/lib/Makefile&quot;  VERBOSE=1 camera_shared/fast"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/doudou/apriltag_car/cmake-build-debug/lib/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/doudou/apriltag_car/cmake-build-debug/lib/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/doudou/apriltag_car/cmake-build-debug/lib/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="id_translate_shared">
+				<Option output="/home/doudou/apriltag_car/cmake-build-debug/lib/libid_translate_shared.so" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/doudou/apriltag_car/cmake-build-debug/lib"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/include/apriltag"/>
+					<Add directory="/usr/include/eigen3"/>
+					<Add directory="/opt/ros/kinetic/include/opencv-3.3.1-dev"/>
+					<Add directory="/opt/ros/kinetic/include/opencv-3.3.1-dev/opencv"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/doudou/apriltag_car/cmake-build-debug/lib/Makefile&quot;  VERBOSE=1 id_translate_shared"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/doudou/apriltag_car/cmake-build-debug/lib/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/doudou/apriltag_car/cmake-build-debug/lib/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/doudou/apriltag_car/cmake-build-debug/lib/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="id_translate_shared/fast">
+				<Option output="/home/doudou/apriltag_car/cmake-build-debug/lib/libid_translate_shared.so" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/doudou/apriltag_car/cmake-build-debug/lib"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/include/apriltag"/>
+					<Add directory="/usr/include/eigen3"/>
+					<Add directory="/opt/ros/kinetic/include/opencv-3.3.1-dev"/>
+					<Add directory="/opt/ros/kinetic/include/opencv-3.3.1-dev/opencv"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/doudou/apriltag_car/cmake-build-debug/lib/Makefile&quot;  VERBOSE=1 id_translate_shared/fast"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/doudou/apriltag_car/cmake-build-debug/lib/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/doudou/apriltag_car/cmake-build-debug/lib/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/doudou/apriltag_car/cmake-build-debug/lib/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="tag_detect_shared">
+				<Option output="/home/doudou/apriltag_car/cmake-build-debug/lib/libtag_detect_shared.so" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/doudou/apriltag_car/cmake-build-debug/lib"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/include/apriltag"/>
+					<Add directory="/usr/include/eigen3"/>
+					<Add directory="/opt/ros/kinetic/include/opencv-3.3.1-dev"/>
+					<Add directory="/opt/ros/kinetic/include/opencv-3.3.1-dev/opencv"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/doudou/apriltag_car/cmake-build-debug/lib/Makefile&quot;  VERBOSE=1 tag_detect_shared"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/doudou/apriltag_car/cmake-build-debug/lib/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/doudou/apriltag_car/cmake-build-debug/lib/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/doudou/apriltag_car/cmake-build-debug/lib/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="tag_detect_shared/fast">
+				<Option output="/home/doudou/apriltag_car/cmake-build-debug/lib/libtag_detect_shared.so" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/doudou/apriltag_car/cmake-build-debug/lib"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/include/apriltag"/>
+					<Add directory="/usr/include/eigen3"/>
+					<Add directory="/opt/ros/kinetic/include/opencv-3.3.1-dev"/>
+					<Add directory="/opt/ros/kinetic/include/opencv-3.3.1-dev/opencv"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/doudou/apriltag_car/cmake-build-debug/lib/Makefile&quot;  VERBOSE=1 tag_detect_shared/fast"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/doudou/apriltag_car/cmake-build-debug/lib/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/doudou/apriltag_car/cmake-build-debug/lib/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/doudou/apriltag_car/cmake-build-debug/lib/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="car_control_shared">
+				<Option output="/home/doudou/apriltag_car/cmake-build-debug/lib/libcar_control_shared.so" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/doudou/apriltag_car/cmake-build-debug/lib"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/include/apriltag"/>
+					<Add directory="/usr/include/eigen3"/>
+					<Add directory="/opt/ros/kinetic/include/opencv-3.3.1-dev"/>
+					<Add directory="/opt/ros/kinetic/include/opencv-3.3.1-dev/opencv"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/doudou/apriltag_car/cmake-build-debug/lib/Makefile&quot;  VERBOSE=1 car_control_shared"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/doudou/apriltag_car/cmake-build-debug/lib/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/doudou/apriltag_car/cmake-build-debug/lib/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/doudou/apriltag_car/cmake-build-debug/lib/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="car_control_shared/fast">
+				<Option output="/home/doudou/apriltag_car/cmake-build-debug/lib/libcar_control_shared.so" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/doudou/apriltag_car/cmake-build-debug/lib"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/include/apriltag"/>
+					<Add directory="/usr/include/eigen3"/>
+					<Add directory="/opt/ros/kinetic/include/opencv-3.3.1-dev"/>
+					<Add directory="/opt/ros/kinetic/include/opencv-3.3.1-dev/opencv"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/doudou/apriltag_car/cmake-build-debug/lib/Makefile&quot;  VERBOSE=1 car_control_shared/fast"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/doudou/apriltag_car/cmake-build-debug/lib/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/doudou/apriltag_car/cmake-build-debug/lib/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/doudou/apriltag_car/cmake-build-debug/lib/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
@@ -391,18 +307,6 @@
 		<Unit filename="/home/doudou/apriltag_car/../../../usr/lib/cmake/eigen3/Eigen3Config.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\usr\lib\cmake\eigen3\"/>
 		</Unit>
-		<Unit filename="/home/doudou/apriltag_car/../../../usr/local/share/OpenCV/OpenCVConfig-version.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\usr\local\share\OpenCV\"/>
-		</Unit>
-		<Unit filename="/home/doudou/apriltag_car/../../../usr/local/share/OpenCV/OpenCVConfig.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\usr\local\share\OpenCV\"/>
-		</Unit>
-		<Unit filename="/home/doudou/apriltag_car/../../../usr/local/share/OpenCV/OpenCVModules-release.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\usr\local\share\OpenCV\"/>
-		</Unit>
-		<Unit filename="/home/doudou/apriltag_car/../../../usr/local/share/OpenCV/OpenCVModules.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\usr\local\share\OpenCV\"/>
-		</Unit>
 		<Unit filename="/home/doudou/apriltag_car/../../../usr/local/share/apriltag/cmake/apriltagConfig.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\usr\local\share\apriltag\cmake\"/>
 		</Unit>
@@ -411,6 +315,18 @@
 		</Unit>
 		<Unit filename="/home/doudou/apriltag_car/../../../usr/local/share/apriltag/cmake/apriltagTargets.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\usr\local\share\apriltag\cmake\"/>
+		</Unit>
+		<Unit filename="/home/doudou/apriltag_car/../../../opt/ros/kinetic/share/OpenCV-3.3.1-dev/OpenCVConfig-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\opt\ros\kinetic\share\OpenCV-3.3.1-dev\"/>
+		</Unit>
+		<Unit filename="/home/doudou/apriltag_car/../../../opt/ros/kinetic/share/OpenCV-3.3.1-dev/OpenCVConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\opt\ros\kinetic\share\OpenCV-3.3.1-dev\"/>
+		</Unit>
+		<Unit filename="/home/doudou/apriltag_car/../../../opt/ros/kinetic/share/OpenCV-3.3.1-dev/OpenCVModules-release.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\opt\ros\kinetic\share\OpenCV-3.3.1-dev\"/>
+		</Unit>
+		<Unit filename="/home/doudou/apriltag_car/../../../opt/ros/kinetic/share/OpenCV-3.3.1-dev/OpenCVModules.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\opt\ros\kinetic\share\OpenCV-3.3.1-dev\"/>
 		</Unit>
 		<Unit filename="/home/doudou/apriltag_car/lib/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\lib\"/>

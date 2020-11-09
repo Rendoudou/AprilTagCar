@@ -25,4 +25,8 @@
 /*id translate*/
 #define TAG_CONFIRM_DISTANCE_LIMIT 1.00
 
+/*car control*/
+#define BASIC_SPEED 20.0
+
+
 #endif //_COMMON_PARAM_H_

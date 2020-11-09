@@ -76,17 +76,6 @@ CMAKE_BINARY_DIR = /home/doudou/apriltag_car/cmake-build-debug
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/snap/clion/129/bin/cmake/linux/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
-
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
@@ -97,6 +86,17 @@ edit_cache:
 edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
+
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/snap/clion/129/bin/cmake/linux/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -131,19 +131,19 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-lib/CMakeFiles/car_control_shared.dir/rule:
-	cd /home/doudou/apriltag_car/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/CMakeFiles/car_control_shared.dir/rule
-.PHONY : lib/CMakeFiles/car_control_shared.dir/rule
+lib/CMakeFiles/user_interface_shared.dir/rule:
+	cd /home/doudou/apriltag_car/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/CMakeFiles/user_interface_shared.dir/rule
+.PHONY : lib/CMakeFiles/user_interface_shared.dir/rule
 
 # Convenience name for target.
-car_control_shared: lib/CMakeFiles/car_control_shared.dir/rule
+user_interface_shared: lib/CMakeFiles/user_interface_shared.dir/rule
 
-.PHONY : car_control_shared
+.PHONY : user_interface_shared
 
 # fast build rule for target.
-car_control_shared/fast:
-	cd /home/doudou/apriltag_car/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/car_control_shared.dir/build.make lib/CMakeFiles/car_control_shared.dir/build
-.PHONY : car_control_shared/fast
+user_interface_shared/fast:
+	cd /home/doudou/apriltag_car/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/user_interface_shared.dir/build.make lib/CMakeFiles/user_interface_shared.dir/build
+.PHONY : user_interface_shared/fast
 
 # Convenience name for target.
 lib/CMakeFiles/camera_shared.dir/rule:
@@ -191,19 +191,19 @@ tag_detect_shared/fast:
 .PHONY : tag_detect_shared/fast
 
 # Convenience name for target.
-lib/CMakeFiles/user_interface_shared.dir/rule:
-	cd /home/doudou/apriltag_car/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/CMakeFiles/user_interface_shared.dir/rule
-.PHONY : lib/CMakeFiles/user_interface_shared.dir/rule
+lib/CMakeFiles/car_control_shared.dir/rule:
+	cd /home/doudou/apriltag_car/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/CMakeFiles/car_control_shared.dir/rule
+.PHONY : lib/CMakeFiles/car_control_shared.dir/rule
 
 # Convenience name for target.
-user_interface_shared: lib/CMakeFiles/user_interface_shared.dir/rule
+car_control_shared: lib/CMakeFiles/car_control_shared.dir/rule
 
-.PHONY : user_interface_shared
+.PHONY : car_control_shared
 
 # fast build rule for target.
-user_interface_shared/fast:
-	cd /home/doudou/apriltag_car/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/user_interface_shared.dir/build.make lib/CMakeFiles/user_interface_shared.dir/build
-.PHONY : user_interface_shared/fast
+car_control_shared/fast:
+	cd /home/doudou/apriltag_car/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/car_control_shared.dir/build.make lib/CMakeFiles/car_control_shared.dir/build
+.PHONY : car_control_shared/fast
 
 camera.o: camera.cpp.o
 

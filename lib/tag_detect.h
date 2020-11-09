@@ -69,4 +69,4 @@ cv::Mat &tag_detect();
 bool release_tdtfopt();
 
 
-#endif
+#endif //_TAG_DETECT_H_

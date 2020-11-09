@@ -15,6 +15,11 @@ find_package(Eigen3 REQUIRED)
 find_package(OpenCV REQUIRED)
 find_package(apriltag REQUIRED)
 
+#找到apriltag
+message(STATUS "apriltag_include dirs:${apriltag_INCLUDE_DIRS}")
+message(STATUS "apriltag_dir:${apriltag_DIR}")
+message(STATUS "apriltag_libs:${apriltag_LIBS}")
+
 #子目录
 add_subdirectory(lib)
 
@@ -29,17 +34,13 @@ set(My_LIBS
         camera_shared
         tag_detect_shared
         id_translate_shared
+        car_control_shared
         user_interface_shared
-)
-
-#找到apriltag
-message(STATUS "apriltag_include dirs:${apriltag_INCLUDE_DIRS}")
-message(STATUS "apriltag_dir:${apriltag_DIR}")
-message(STATUS "apriltag_libs:${apriltag_LIBS}")
+        )
 
 #可执行文件
 add_executable(AprilTagCar apriltag_car.cpp)
 
 #链接
-target_link_libraries(AprilTagCar ${OpenCV_LIBS} ${My_LIBS})
+target_link_libraries(AprilTagCar ${apriltag_LIBS} ${OpenCV_LIBS} ${My_LIBS})
 

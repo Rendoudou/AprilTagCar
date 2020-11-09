@@ -144,17 +144,17 @@ AprilTagCar/fast:
 .PHONY : AprilTagCar/fast
 
 #=============================================================================
-# Target rules for targets named car_control_shared
+# Target rules for targets named user_interface_shared
 
 # Build rule for target.
-car_control_shared: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 car_control_shared
-.PHONY : car_control_shared
+user_interface_shared: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 user_interface_shared
+.PHONY : user_interface_shared
 
 # fast build rule for target.
-car_control_shared/fast:
-	$(MAKE) $(MAKESILENT) -f lib/CMakeFiles/car_control_shared.dir/build.make lib/CMakeFiles/car_control_shared.dir/build
-.PHONY : car_control_shared/fast
+user_interface_shared/fast:
+	$(MAKE) $(MAKESILENT) -f lib/CMakeFiles/user_interface_shared.dir/build.make lib/CMakeFiles/user_interface_shared.dir/build
+.PHONY : user_interface_shared/fast
 
 #=============================================================================
 # Target rules for targets named camera_shared
@@ -196,17 +196,17 @@ tag_detect_shared/fast:
 .PHONY : tag_detect_shared/fast
 
 #=============================================================================
-# Target rules for targets named user_interface_shared
+# Target rules for targets named car_control_shared
 
 # Build rule for target.
-user_interface_shared: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 user_interface_shared
-.PHONY : user_interface_shared
+car_control_shared: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 car_control_shared
+.PHONY : car_control_shared
 
 # fast build rule for target.
-user_interface_shared/fast:
-	$(MAKE) $(MAKESILENT) -f lib/CMakeFiles/user_interface_shared.dir/build.make lib/CMakeFiles/user_interface_shared.dir/build
-.PHONY : user_interface_shared/fast
+car_control_shared/fast:
+	$(MAKE) $(MAKESILENT) -f lib/CMakeFiles/car_control_shared.dir/build.make lib/CMakeFiles/car_control_shared.dir/build
+.PHONY : car_control_shared/fast
 
 apriltag_car.o: apriltag_car.cpp.o
 
