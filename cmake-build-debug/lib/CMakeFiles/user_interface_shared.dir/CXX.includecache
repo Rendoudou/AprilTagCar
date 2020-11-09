@@ -20,10 +20,16 @@ common_param.h
 
 /home/doudou/apriltag_car/lib/common_param.h
 
+/home/doudou/apriltag_car/lib/id_translate.h
+map
+-
+Eigen/Core
+-
+common_param.h
+/home/doudou/apriltag_car/lib/common_param.h
+
 /home/doudou/apriltag_car/lib/tag_detect.h
 iostream
--
-string
 -
 opencv2/opencv.hpp
 -
@@ -71,6 +77,8 @@ camera.h
 /home/doudou/apriltag_car/lib/camera.h
 tag_detect.h
 /home/doudou/apriltag_car/lib/tag_detect.h
+id_translate.h
+/home/doudou/apriltag_car/lib/id_translate.h
 
 /usr/include/eigen3/Eigen/Core
 src/Core/util/DisableStupidWarnings.h

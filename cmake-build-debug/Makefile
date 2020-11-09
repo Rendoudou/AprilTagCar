@@ -144,6 +144,19 @@ AprilTagCar/fast:
 .PHONY : AprilTagCar/fast
 
 #=============================================================================
+# Target rules for targets named car_control_shared
+
+# Build rule for target.
+car_control_shared: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 car_control_shared
+.PHONY : car_control_shared
+
+# fast build rule for target.
+car_control_shared/fast:
+	$(MAKE) $(MAKESILENT) -f lib/CMakeFiles/car_control_shared.dir/build.make lib/CMakeFiles/car_control_shared.dir/build
+.PHONY : car_control_shared/fast
+
+#=============================================================================
 # Target rules for targets named camera_shared
 
 # Build rule for target.
@@ -232,6 +245,7 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... AprilTagCar"
 	@echo "... camera_shared"
+	@echo "... car_control_shared"
 	@echo "... id_translate_shared"
 	@echo "... tag_detect_shared"
 	@echo "... user_interface_shared"

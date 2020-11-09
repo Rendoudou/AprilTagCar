@@ -93,6 +93,7 @@ clean: lib/clean
 # Directory level rules for directory lib
 
 # Recursive "all" directory target.
+lib/all: lib/CMakeFiles/car_control_shared.dir/all
 lib/all: lib/CMakeFiles/camera_shared.dir/all
 lib/all: lib/CMakeFiles/id_translate_shared.dir/all
 lib/all: lib/CMakeFiles/tag_detect_shared.dir/all
@@ -106,6 +107,7 @@ lib/preinstall:
 .PHONY : lib/preinstall
 
 # Recursive "clean" directory target.
+lib/clean: lib/CMakeFiles/car_control_shared.dir/clean
 lib/clean: lib/CMakeFiles/camera_shared.dir/clean
 lib/clean: lib/CMakeFiles/id_translate_shared.dir/clean
 lib/clean: lib/CMakeFiles/tag_detect_shared.dir/clean
@@ -144,6 +146,33 @@ CMakeFiles/AprilTagCar.dir/clean:
 .PHONY : CMakeFiles/AprilTagCar.dir/clean
 
 #=============================================================================
+# Target rules for target lib/CMakeFiles/car_control_shared.dir
+
+# All Build rule for target.
+lib/CMakeFiles/car_control_shared.dir/all:
+	$(MAKE) $(MAKESILENT) -f lib/CMakeFiles/car_control_shared.dir/build.make lib/CMakeFiles/car_control_shared.dir/depend
+	$(MAKE) $(MAKESILENT) -f lib/CMakeFiles/car_control_shared.dir/build.make lib/CMakeFiles/car_control_shared.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/doudou/apriltag_car/cmake-build-debug/CMakeFiles --progress-num=5,6 "Built target car_control_shared"
+.PHONY : lib/CMakeFiles/car_control_shared.dir/all
+
+# Build rule for subdir invocation for target.
+lib/CMakeFiles/car_control_shared.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/doudou/apriltag_car/cmake-build-debug/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/CMakeFiles/car_control_shared.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/doudou/apriltag_car/cmake-build-debug/CMakeFiles 0
+.PHONY : lib/CMakeFiles/car_control_shared.dir/rule
+
+# Convenience name for target.
+car_control_shared: lib/CMakeFiles/car_control_shared.dir/rule
+
+.PHONY : car_control_shared
+
+# clean rule for target.
+lib/CMakeFiles/car_control_shared.dir/clean:
+	$(MAKE) $(MAKESILENT) -f lib/CMakeFiles/car_control_shared.dir/build.make lib/CMakeFiles/car_control_shared.dir/clean
+.PHONY : lib/CMakeFiles/car_control_shared.dir/clean
+
+#=============================================================================
 # Target rules for target lib/CMakeFiles/camera_shared.dir
 
 # All Build rule for target.
@@ -177,7 +206,7 @@ lib/CMakeFiles/camera_shared.dir/clean:
 lib/CMakeFiles/id_translate_shared.dir/all:
 	$(MAKE) $(MAKESILENT) -f lib/CMakeFiles/id_translate_shared.dir/build.make lib/CMakeFiles/id_translate_shared.dir/depend
 	$(MAKE) $(MAKESILENT) -f lib/CMakeFiles/id_translate_shared.dir/build.make lib/CMakeFiles/id_translate_shared.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/doudou/apriltag_car/cmake-build-debug/CMakeFiles --progress-num=5,6 "Built target id_translate_shared"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/doudou/apriltag_car/cmake-build-debug/CMakeFiles --progress-num=7,8 "Built target id_translate_shared"
 .PHONY : lib/CMakeFiles/id_translate_shared.dir/all
 
 # Build rule for subdir invocation for target.
@@ -204,7 +233,7 @@ lib/CMakeFiles/id_translate_shared.dir/clean:
 lib/CMakeFiles/tag_detect_shared.dir/all:
 	$(MAKE) $(MAKESILENT) -f lib/CMakeFiles/tag_detect_shared.dir/build.make lib/CMakeFiles/tag_detect_shared.dir/depend
 	$(MAKE) $(MAKESILENT) -f lib/CMakeFiles/tag_detect_shared.dir/build.make lib/CMakeFiles/tag_detect_shared.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/doudou/apriltag_car/cmake-build-debug/CMakeFiles --progress-num=7,8 "Built target tag_detect_shared"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/doudou/apriltag_car/cmake-build-debug/CMakeFiles --progress-num=9,10 "Built target tag_detect_shared"
 .PHONY : lib/CMakeFiles/tag_detect_shared.dir/all
 
 # Build rule for subdir invocation for target.
@@ -231,7 +260,7 @@ lib/CMakeFiles/tag_detect_shared.dir/clean:
 lib/CMakeFiles/user_interface_shared.dir/all: lib/CMakeFiles/tag_detect_shared.dir/all
 	$(MAKE) $(MAKESILENT) -f lib/CMakeFiles/user_interface_shared.dir/build.make lib/CMakeFiles/user_interface_shared.dir/depend
 	$(MAKE) $(MAKESILENT) -f lib/CMakeFiles/user_interface_shared.dir/build.make lib/CMakeFiles/user_interface_shared.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/doudou/apriltag_car/cmake-build-debug/CMakeFiles --progress-num=9,10 "Built target user_interface_shared"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/doudou/apriltag_car/cmake-build-debug/CMakeFiles --progress-num=11,12 "Built target user_interface_shared"
 .PHONY : lib/CMakeFiles/user_interface_shared.dir/all
 
 # Build rule for subdir invocation for target.

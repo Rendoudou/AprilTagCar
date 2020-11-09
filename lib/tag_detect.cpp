@@ -2,11 +2,12 @@
 // Created by doudou on 2020/11/4.
 //
 #include "tag_detect.h"
-
+#include "camera.h"
 using namespace cv;
 
 //static params
 //init
+static cv::Mat *frame_p = nullptr;
 static getopt_t *getopt_tag = nullptr;
 static apriltag_family_t *tf = nullptr;
 static apriltag_detector_t *td = nullptr;
@@ -95,7 +96,7 @@ static bool init_td() {
 bool tag_detect_init() {
     if (tf != nullptr)
         return true;
-
+    frame_p = &(get_frame());
     family_name = FAMILY; //set tag family
     camera_calib_info.tagsize = TAG_SIZE; //use camera k to estimate R and t
     camera_calib_info.fx = CAMERA_FX;
@@ -115,11 +116,19 @@ bool tag_detect_init() {
 }
 
 
-/* cv::Mat& tag_detect(cv::Mat& frame_in);
+/* TagDetectInfo &get_tag_detect_info();
+ * 返回外部需要的本文件信息
+ */
+TagDetectInfo &get_tag_detect_info() {
+    return tag_detect_info;
+}
+
+
+/* cv::Mat &tag_detect();
  * 标签检测
  */
-cv::Mat &tag_detect(cv::Mat &frame_in) {
-    frame_copy = frame_in.clone();
+cv::Mat &tag_detect() {
+    frame_copy = frame_p->clone();
     cv::cvtColor(frame_copy, frame_gray, cv::COLOR_BGR2GRAY);
 
     // Make an image_u8_t header for the Mat data
@@ -210,12 +219,4 @@ bool release_tdtfopt() {
     getopt_destroy(getopt_tag);
     std::cout << "Source release successfully." << std::endl;
     return true;
-}
-
-
-/* TagDetectInfo &get_tag_detect_info();
- * 返回外部需要的本文件信息
- */
-TagDetectInfo &get_tag_detect_info() {
-    return tag_detect_info;
 }

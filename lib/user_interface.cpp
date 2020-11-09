@@ -2,11 +2,15 @@
 // Created by doudou on 2020/11/5.
 //
 #include "user_interface.h"
+#include "camera.h"
+#include "tag_detect.h"
+#include "id_translate.h"
 using namespace std;
 
 //static param
 static const TagDetectInfo *tag_detect_p = nullptr;
 static const CameraInfo *camera_p = nullptr;
+static const IdTranslateInfo *id_translate_p = nullptr;
 
 //static func
 static bool show_id_H(const TagDetectInfo &info);
@@ -20,6 +24,7 @@ static bool show_id_t(const TagDetectInfo &info);
 bool summary_info_init(){
     tag_detect_p = &get_tag_detect_info();
     camera_p = &get_camera_info();
+    id_translate_p = &get_id_translate_info();
     return true;
 }
 
@@ -31,7 +36,8 @@ void show_tag_info() {
     if(nullptr != tag_detect_p){
         show_id_t(*tag_detect_p);
     }
-    printf("Fps is %.2lf.\n\n",camera_p->fps);
+    printf("MoveStatus is %03d.\n\n", id_translate_p->move_status);
+    //printf("Fps is %.2lf.\n\n",camera_p->fps);
 }
 
 

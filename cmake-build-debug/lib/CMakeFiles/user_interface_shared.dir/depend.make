@@ -3,6 +3,7 @@
 
 lib/CMakeFiles/user_interface_shared.dir/user_interface.cpp.o: ../lib/camera.h
 lib/CMakeFiles/user_interface_shared.dir/user_interface.cpp.o: ../lib/common_param.h
+lib/CMakeFiles/user_interface_shared.dir/user_interface.cpp.o: ../lib/id_translate.h
 lib/CMakeFiles/user_interface_shared.dir/user_interface.cpp.o: ../lib/tag_detect.h
 lib/CMakeFiles/user_interface_shared.dir/user_interface.cpp.o: ../lib/user_interface.cpp
 lib/CMakeFiles/user_interface_shared.dir/user_interface.cpp.o: ../lib/user_interface.h

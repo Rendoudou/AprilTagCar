@@ -4,7 +4,11 @@
 #ifndef _COMMON_PARAM_H_
 #define _COMMON_PARAM_H_
 
+
 /*****init*****/
+
+#define PI 3.14159265
+
 /*camera*/
 #define FPS
 #define SCREEN_SAVER_PATH "../source/screen_saver.jpg"
@@ -18,15 +22,7 @@
 #define CAMERA_CX  1517.2
 #define CAMERA_CY  2032.7
 
-/*apriltag_car*/
-typedef enum {
+/*id translate*/
+#define TAG_CONFIRM_DISTANCE_LIMIT 1.00
 
-    GET_FRAME = 1,
-    DETECT_TAG,
-    TRANSLATE_ID,
-    CAR_CONTROL,
-    USER_INTERFACE
-
-}CarStatus;
-
-#endif //APRILTAG_TEST_COMMON_PARAM_H
+#endif //_COMMON_PARAM_H_

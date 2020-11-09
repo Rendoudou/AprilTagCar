@@ -131,6 +131,21 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+lib/CMakeFiles/car_control_shared.dir/rule:
+	cd /home/doudou/apriltag_car/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/CMakeFiles/car_control_shared.dir/rule
+.PHONY : lib/CMakeFiles/car_control_shared.dir/rule
+
+# Convenience name for target.
+car_control_shared: lib/CMakeFiles/car_control_shared.dir/rule
+
+.PHONY : car_control_shared
+
+# fast build rule for target.
+car_control_shared/fast:
+	cd /home/doudou/apriltag_car/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/car_control_shared.dir/build.make lib/CMakeFiles/car_control_shared.dir/build
+.PHONY : car_control_shared/fast
+
+# Convenience name for target.
 lib/CMakeFiles/camera_shared.dir/rule:
 	cd /home/doudou/apriltag_car/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/CMakeFiles/camera_shared.dir/rule
 .PHONY : lib/CMakeFiles/camera_shared.dir/rule
@@ -216,6 +231,33 @@ camera.s: camera.cpp.s
 camera.cpp.s:
 	cd /home/doudou/apriltag_car/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/camera_shared.dir/build.make lib/CMakeFiles/camera_shared.dir/camera.cpp.s
 .PHONY : camera.cpp.s
+
+car_control.o: car_control.cpp.o
+
+.PHONY : car_control.o
+
+# target to build an object file
+car_control.cpp.o:
+	cd /home/doudou/apriltag_car/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/car_control_shared.dir/build.make lib/CMakeFiles/car_control_shared.dir/car_control.cpp.o
+.PHONY : car_control.cpp.o
+
+car_control.i: car_control.cpp.i
+
+.PHONY : car_control.i
+
+# target to preprocess a source file
+car_control.cpp.i:
+	cd /home/doudou/apriltag_car/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/car_control_shared.dir/build.make lib/CMakeFiles/car_control_shared.dir/car_control.cpp.i
+.PHONY : car_control.cpp.i
+
+car_control.s: car_control.cpp.s
+
+.PHONY : car_control.s
+
+# target to generate assembly for a file
+car_control.cpp.s:
+	cd /home/doudou/apriltag_car/cmake-build-debug && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/car_control_shared.dir/build.make lib/CMakeFiles/car_control_shared.dir/car_control.cpp.s
+.PHONY : car_control.cpp.s
 
 id_translate.o: id_translate.cpp.o
 
@@ -307,12 +349,16 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... camera_shared"
+	@echo "... car_control_shared"
 	@echo "... id_translate_shared"
 	@echo "... tag_detect_shared"
 	@echo "... user_interface_shared"
 	@echo "... camera.o"
 	@echo "... camera.i"
 	@echo "... camera.s"
+	@echo "... car_control.o"
+	@echo "... car_control.i"
+	@echo "... car_control.s"
 	@echo "... id_translate.o"
 	@echo "... id_translate.i"
 	@echo "... id_translate.s"

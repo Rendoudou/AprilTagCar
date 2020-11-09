@@ -13,6 +13,7 @@ add_library(camera_shared SHARED camera.cpp)
 add_library(tag_detect_shared SHARED tag_detect.cpp)
 add_library(id_translate_shared SHARED id_translate.cpp)
 add_library(user_interface_shared SHARED user_interface.cpp)
+add_library(car_control_shared SHARED car_control.cpp)
 
 #链接
 target_link_libraries(camera_shared ${OpenCV_LIBS})

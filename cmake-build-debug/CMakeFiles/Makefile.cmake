@@ -66,6 +66,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/AprilTagCar.dir/DependInfo.cmake"
+  "lib/CMakeFiles/car_control_shared.dir/DependInfo.cmake"
   "lib/CMakeFiles/camera_shared.dir/DependInfo.cmake"
   "lib/CMakeFiles/id_translate_shared.dir/DependInfo.cmake"
   "lib/CMakeFiles/tag_detect_shared.dir/DependInfo.cmake"

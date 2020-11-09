@@ -6,7 +6,6 @@
 
 //include
 #include <iostream>
-#include <string>
 #include <opencv2/opencv.hpp>
 #include <map>
 #include <Eigen/Core>
@@ -28,23 +27,13 @@ extern "C" {
 }
 
 
-/*
- * info return
- */
+/*info return*/
 typedef struct {
     std::map<unsigned int, Eigen::Matrix<float, 3, 3>> id_H_map;
     std::map<unsigned int, Eigen::Matrix<float, 3, 3>> id_R_map;
     std::map<unsigned int, Eigen::Matrix<float, 3, 1>> id_t_map;
     std::vector<int> ids;
-}TagDetectInfo;
-
-
-/* cv::Mat& tag_detect(cv::Mat& frame_in);
- * describe: 标签检测
- * param: cv::Mat&, frame_in, 输入图像。
- * return: cv::Mat&, 处理后结果。
- */
-cv::Mat &tag_detect(cv::Mat &frame_in);
+} TagDetectInfo;
 
 
 /* bool tag_detect_init(void);
@@ -55,20 +44,29 @@ cv::Mat &tag_detect(cv::Mat &frame_in);
 bool tag_detect_init();
 
 
-/* release_tdtfopt();
- * describe: 释放内存
- * param: void
- * return: bool
- */
-bool release_tdtfopt();
-
-
 /* TagDetectInfo &get_tag_detect_info();
  * describe: 返回外部需要的本文件信息
  * param: void
  * return: TagDetectInfo &,本文件部分信息
  */
 TagDetectInfo &get_tag_detect_info();
+
+
+
+/* cv::Mat& tag_detect();
+ * describe: 标签检测
+ * param: void 内部设置图像源。
+ * return: cv::Mat&, 处理后结果。
+ */
+cv::Mat &tag_detect();
+
+
+/* release_tdtfopt();
+ * describe: 释放内存
+ * param: void
+ * return: bool
+ */
+bool release_tdtfopt();
 
 
 #endif

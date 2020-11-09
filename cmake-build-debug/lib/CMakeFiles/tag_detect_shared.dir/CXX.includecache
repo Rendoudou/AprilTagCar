@@ -6,16 +6,28 @@
 
 #IncludeRegexTransform: 
 
+/home/doudou/apriltag_car/lib/camera.h
+iostream
+-
+string
+-
+opencv2/opencv.hpp
+-
+ctime
+-
+common_param.h
+/home/doudou/apriltag_car/lib/common_param.h
+
 /home/doudou/apriltag_car/lib/common_param.h
 
 /home/doudou/apriltag_car/lib/tag_detect.cpp
 tag_detect.h
 /home/doudou/apriltag_car/lib/tag_detect.h
+camera.h
+/home/doudou/apriltag_car/lib/camera.h
 
 /home/doudou/apriltag_car/lib/tag_detect.h
 iostream
--
-string
 -
 opencv2/opencv.hpp
 -

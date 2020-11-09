@@ -2,11 +2,11 @@
 // Created by doudou on 2020/11/4.
 //
 #include "camera.h"
+
 using namespace std;
 using namespace cv;
 
 //static params, return to outside
-static cv::Mat frame;/* NOLINT */
 static cv::Mat screen_saver;/* NOLINT */
 static cv::VideoCapture cap;/* NOLINT */
 static CameraInfo camera_info;
@@ -40,6 +40,7 @@ bool video_input_init() {
  */
 static int frame_num = 0;
 static int frame_count = 0;
+
 bool video_input_init(const std::string &video_path, const std::string &saver_path) {
     cap.open(video_path); // open video
     if (!cap.isOpened())
@@ -53,11 +54,19 @@ bool video_input_init(const std::string &video_path, const std::string &saver_pa
 }
 
 
+/* CameraInfo &get_camera_info();
+ * 返回外部需要的本文件信息
+ */
+CameraInfo &get_camera_info() {
+    return camera_info;
+}
+
+
 /* cv::Mat& get_frame();
  * describe: 返回一帧图片
  */
 cv::Mat &get_frame() {
-    return frame;
+    return camera_info.frame;
 }
 
 
@@ -67,38 +76,30 @@ cv::Mat &get_frame() {
 static bool load_saver_flag = true;
 static clock_t t_start, t_end;
 static bool time_record_flag = true;
-bool update_frame(){
-    if(time_record_flag){
+
+bool update_frame() {
+    if (time_record_flag) {
         t_start = clock();
         time_record_flag = false;
-    }
-    else{
+    } else {
         t_end = clock();
-        camera_info.fps = 1.0 / ((double)(t_end - t_start)/CLOCKS_PER_SEC);
+        camera_info.fps = 1.0 / ((double) (t_end - t_start) / CLOCKS_PER_SEC);
         time_record_flag = true;
     }
 
     if (frame_num == 0) //camera
-        cap >> frame;
+        cap >> camera_info.frame;
     else { //video
         if (frame_count < frame_num - 1) {
-            cap >> frame;
+            cap >> camera_info.frame;
             frame_count++;
         } else {
             //std::cerr << "It is the end of the video, return " << std::endl;
-            if(load_saver_flag){
-                frame = screen_saver.clone();
+            if (load_saver_flag) {
+                camera_info.frame = screen_saver.clone();
                 load_saver_flag = false;
             }
         }
     }
     return true;
-}
-
-
-/* CameraInfo &get_camera_info();
- * 返回外部需要的本文件信息
- */
-CameraInfo &get_camera_info(){
-    return camera_info;
 }

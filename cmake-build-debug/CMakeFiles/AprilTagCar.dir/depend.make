@@ -3,6 +3,7 @@
 
 CMakeFiles/AprilTagCar.dir/apriltag_car.cpp.o: ../lib/camera.h
 CMakeFiles/AprilTagCar.dir/apriltag_car.cpp.o: ../lib/common_param.h
+CMakeFiles/AprilTagCar.dir/apriltag_car.cpp.o: ../lib/id_translate.h
 CMakeFiles/AprilTagCar.dir/apriltag_car.cpp.o: ../lib/tag_detect.h
 CMakeFiles/AprilTagCar.dir/apriltag_car.cpp.o: ../lib/user_interface.h
 CMakeFiles/AprilTagCar.dir/apriltag_car.cpp.o: ../apriltag_car.cpp

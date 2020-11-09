@@ -12,12 +12,11 @@
 #include "common_param.h"
 
 
-/*
- * info return
- */
+/*info return*/
 typedef struct {
     double fps;
-}CameraInfo;
+    cv::Mat frame;
+} CameraInfo;
 
 
 /* bool video_input_init();
@@ -36,6 +35,14 @@ bool video_input_init();
 bool video_input_init(const std::string &video_path, const std::string &saver_path = SCREEN_SAVER_PATH);
 
 
+/* CameraInfo &get_camera_info();
+ * describe: 返回外部需要的本文件信息
+ * param: void
+ * return: CameraInfo &,本文件部分信息
+ */
+CameraInfo &get_camera_info();
+
+
 /* cv::Mat& get_frame();
  * describe: 返回一帧图片
  * param: void
@@ -50,14 +57,6 @@ cv::Mat &get_frame();
  * return: bool,更新一帧图片是否成功
  */
 bool update_frame();
-
-
-/* CameraInfo &get_camera_info();
- * describe: 返回外部需要的本文件信息
- * param: void
- * return: CameraInfo &,本文件部分信息
- */
-CameraInfo &get_camera_info();
 
 
 #endif 

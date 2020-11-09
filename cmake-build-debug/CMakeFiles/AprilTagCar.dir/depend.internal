@@ -4,6 +4,7 @@
 CMakeFiles/AprilTagCar.dir/apriltag_car.cpp.o
  ../lib/camera.h
  ../lib/common_param.h
+ ../lib/id_translate.h
  ../lib/tag_detect.h
  ../lib/user_interface.h
  /home/doudou/apriltag_car/apriltag_car.cpp

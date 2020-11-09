@@ -1,29 +1,58 @@
+#include "iostream"
 #include "camera.h"
 #include "tag_detect.h"
+#include "id_translate.h"
 #include "user_interface.h"
-#include "common_param.h"
+using namespace std;
+
+/*apriltag_car*/
+typedef enum {
+
+    GET_FRAME = 1,
+    DETECT_TAG,
+    TRANSLATE_ID,
+    CAR_CONTROL,
+    USER_INTERFACE
+
+}MainStatus;
+
+
+/*init*/
+bool initialize_component(){
+    //init
+    if (video_input_init())
+        cout << "init camera success" << endl;
+    else
+        return false;
+    if (tag_detect_init())
+        cout << "init detect success" << endl;
+    else
+        return false;
+    if (summary_info_init())
+        cout << "init user interface success" << endl;
+    else
+        return false;
+    if(id_translate_init())
+        cout << "init id translate success" << endl;
+    else
+        return false;
+
+
+    return true;
+}
 
 /* main
  *  
  */
 int main() {
 
-    //init
-    if (video_input_init())
-        std::cout << "init camera success" << std::endl;
-    else
+    if(!initialize_component()) {
+        cout << "initialization failed." << endl;
         return -1;
-    if (tag_detect_init())
-        std::cout << "init detect success" << std::endl;
-    else
-        return -1;
-    if (summary_info_init())
-        std::cout << "init user success" << std::endl;
-    else
-        return -1;
+    }
 
     //status
-    CarStatus status = GET_FRAME;
+    MainStatus status = GET_FRAME;
 
     //main loop
     while (true) {
@@ -33,12 +62,14 @@ int main() {
                 status = DETECT_TAG;
                 break;
             case (DETECT_TAG):
-                imshow("test", tag_detect(get_frame()));
+                imshow("test", tag_detect());
                 status = TRANSLATE_ID;
                 break;
             case (TRANSLATE_ID):
-
-                status = CAR_CONTROL;
+                if (renew_move_status())
+                    status = CAR_CONTROL;
+                else
+                    status = GET_FRAME;
                 break;
             case (CAR_CONTROL):
 
